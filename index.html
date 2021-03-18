@@ -8,7 +8,13 @@
     <link rel="shortcut icon" href="img/q2.png">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
     <script type="text/javascript" src="js/snap.svg.js"></script>
     <script type="text/javascript" src="js/soundfont-player.js"></script>
@@ -32,125 +38,8 @@
         </div>
     </div>
 
-    <div class="md-modal md-fx" id="dv-modal-outer">
-        <div class="md-content">
-
-            <div class="outer">
-
-                <div id="dv-progress-main-wrap" class="progress">
-                    <div id="dv-progress-wrap-L" class="left">
-                        <div id="dv-start-L" class="current">Başlangıç</div>
-                        <div id="dv-zemin-L"></div>
-                        <div id="dv-nakarat-L"></div>
-                        <div id="dv-meyan-L"></div>
-                        <div id="dv-finish-L">Bitiş</div>
-                    </div>
-                    <div id="dv-progress-wrap-R" class="right">
-                        <div id="dv-start-R" class="current">Besteci başlatılıyor</div>
-                        <div id="dv-zemin-R">Zemin bestelenecek</div>
-                        <div id="dv-nakarat-R">Nakarat bestelenecek</div>
-                        <div id="dv-meyan-R">Meyan bestelenecek</div>
-                        <div id="dv-finish-R" class="done">İndirme hazırlanacak</div>
-                    </div>
-                </div>
-
-                <div id="dv-progress-error">
-                    <ul class="no-ul">
-                        <li>
-                            <span id="spn-error-message">Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar
-                                deneyiniz.</span>
-                        </li>
-                        <li><br></li>
-                        <li>
-                            <div class="dv-button" onclick="closeProgressBoxAfter(1);">Kapat</div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="md-overlay"></div>
-
     <script type="text/javascript">
         "use strict";
-
-        function toggleProgressError(isVisible) {
-            let progressMainWrap = document.querySelector('#dv-progress-main-wrap');
-            let progressErrorDiv = document.querySelector('#dv-progress-error');
-
-            if (isVisible) {
-                progressMainWrap.classList.add('fadingOut');
-                progressErrorDiv.style.width = '100%';
-                progressErrorDiv.style.height = '100%';
-                progressErrorDiv.classList.add('fadingIn');
-            } else {
-                progressErrorDiv.style.width = '0';
-                progressErrorDiv.style.height = '0';
-                progressErrorDiv.classList.remove('fadingIn');
-                progressMainWrap.classList.remove('fadingOut');
-            }
-        }
-
-        function closeProgressBoxAfter(after) {
-            setTimeout(function () {
-                let toServerBtn = document.querySelector('#btnBestele');
-                toServerBtn.style.color = '';
-                toServerBtn.style.pointerEvents = '';
-                toggleProgressModal(false);
-            }, after);
-        }
-
-        function toggleProgressModal(isVisible) {
-            let modal = document.getElementById('dv-modal-outer');
-            if (isVisible) {
-                modal.classList.add('md-show');
-            } else {
-                modal.classList.remove('md-show');
-            }
-        }
-
-        function setProgressStatus(message, section, changeClasses) {
-            let leftDivs = document.querySelector('#dv-progress-wrap-L').children;
-            let rightDivs = document.querySelector('#dv-progress-wrap-R').children;
-            for (let i = 0; i < leftDivs.length; i++) {
-                if (leftDivs[i].getAttribute('id').indexOf(section) < 0) {
-                    if (changeClasses) {
-                        leftDivs[i].classList.remove('current');
-                        rightDivs[i].classList.remove('current');
-                        leftDivs[i].classList.add('prev');
-                        rightDivs[i].classList.add('prev');
-                    }
-                } else {
-                    if (changeClasses) {
-                        leftDivs[i].classList.add('current');
-                        rightDivs[i].classList.add('current');
-                    }
-                    rightDivs[i].innerHTML = message;
-                    break;
-                }
-            }
-        }
-
-        function resetProgressStatus() {
-            toggleProgressError(0);
-            mParams.lastStatus = null;
-            document.querySelector('#dv-progress-wrap-L').innerHTML = '' +
-                '<div id="dv-start-L" class="current">Başlangıç</div>' +
-                '<div id="dv-zemin-L"></div>' +
-                '<div id="dv-nakarat-L"></div>' +
-                '<div id="dv-meyan-L"></div>' +
-                '<div id="dv-finish-L">Bitiş</div>';
-
-            document.querySelector('#dv-progress-wrap-R').innerHTML = '' +
-                '<div id="dv-start-R" class="current">Besteci başlatılıyor</div>' +
-                '<div id="dv-zemin-R">Zemin bestelenecek</div>' +
-                '<div id="dv-nakarat-R">Nakarat bestelenecek</div>' +
-                '<div id="dv-meyan-R">Meyan bestelenecek</div>' +
-                '<div id="dv-finish-R" class="done">İndirme hazırlanacak</div>';
-        }
 
         const notePositions = {
             b2: 9,
@@ -582,109 +471,6 @@
             }
         }
 
-        function toServerBtnClick(e, sender) {
-            sender.style.color = '#ddd';
-            sender.style.pointerEvents = 'none';
-            e.stopPropagation();
-
-            resetProgressStatus();
-            toggleProgressModal(true);
-
-            let song = tmmScore.getWholePlayableObject();
-            let notes = [];
-            for (let note of song) {
-                notes.push(note.toNoteStr(true, true));
-            }
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (this.readyState === this.HEADERS_RECEIVED) {
-                    let status_url = this.getResponseHeader('Location');
-                    console.log('st url:', status_url);
-                    updateCompositionProgress(status_url);
-                }
-            }
-
-            xhr.open('POST', '/start_composer', true);
-            xhr.send(JSON.stringify({ 'makam': mParams.makam.name, 'notes': notes }));
-        }
-
-        let composedSong = {
-            "m": [["Do5#4:1/8", "Re5:1/4", "Sol5:1/8", "Fa5:1/8", "Mi5:1/8", "Re5:1/8", "Do5#4:1/8", "Si4b4:1/8"], ["La4:1/8", "Sol4:1/8", "La4:1/8", "Si4b4:1/8", "Do5#4:1/8", "Re5:1/8", "Mi5:1/8", "Fa5:1/8", "Mi5:1/8"], ["Mi5:1/8", "Do5#4:1/8", "Re5:1/8", "Mi5:1/8", "Mi5:1/8", "Fa5:1/8", "Mi5:1/8", "Fa5:1/8", "Mi5:1/8"], ["Re5:1/8", "Do5#4:1/8", "Re5:1/4", "Fa5:1/8", "Mi5:1/8", "Re5:1/8", "Do5#4:1/4"]],
-            "n": [["La4:1/16", "Si4b4:1/16", "Do5#4:1/16", "Re5:1/8", "Mi5:1/8", "Re5:1/8", "Do5#4:1/8", "Si4b4:1/8", "La4:1/8", "La4:1/8", "Si4b4:1/16"], ["Do5#4:1/16", "Si4b4:1/16", "La4:1/16", "La4:1/4", "La4:1/4", "Rest:1/8", "Re5:1/4", "Mi5:1/16"], ["Re5:1/8", "Mi5:1/16", "Mi5:1/16", "Re5:1/16", "Do5#4:1/16", "Re5:1/4", "Do5#4:1/8", "Re5:1/8", "Mi5:1/8", "Re5:1/8"], ["Do5#4:1/8", "Re5:1/8", "Mi5:1/8", "Fa5:1/8", "Fa5:1/8", "Mi5:1/8", "Mi5:1/8", "Re5:1/8", "Re5:1/8"]],
-            "sr": ["Si4b4:1/16", "Do5#4:1/16", "Si4b4:1/16", "La4:1/16", "La4:3/8", "La4:1/4", "La4:1/8", "La4:1/8"],
-            "z": [["La4:1/8", "Fa5#4:1/8", "Mi5:1/8", "Fa5#4:1/8", "Mi5:1/8", "Re5:1/8", "Do5#4:1/8", "Si4b4:1/8", "Si4b4:1/8"], ["La4:1/8", "La4:1/2", "Rest:1/8", "Do5#4:1/4", "Re5:1/8"], ["Re5:1/8", "Mi5:1/8", "Re5:1/8", "Do5#4:1/8", "Do5#4:1/8", "Si4b4:1/8", "La4:1/8", "Si4b4:1/8", "Do5#4:1/8"], ["Re5:1/8", "Do5#4:1/16", "Si4b4:1/16", "La4:1/16", "Si4b4:1/16", "La4:1/16", "Si4b4:1/16", "Re5:1/16", "Mi5:1/16", "Re5:1/16", "Do5#4:1/16", "Si4b4:1/16", "La4:1/4", "Sol4:1/16"]]
-        };
-
-        function updateCompositionProgress(status_url) {
-            let xhr = new XMLHttpRequest();
-            xhr.open('GET', status_url, true);
-            xhr.responseType = 'json';
-            xhr.onload = function () {
-                if (this.status === 200) {
-                    let response = xhr.response;
-                    console.log('response is:', response);
-                    let state = response['state'];
-                    let status = response['status'];
-
-                    if (status === 'ERROR' || (state !== 'PENDING' && state !== 'PROGRESS' && state !== 'SUCCESS')) {
-                        toggleProgressError(true);
-                        return false;
-                    }
-
-                    if (state === 'PROGRESS') {
-                        if (mParams.lastStatus !== status) {
-                            mParams.lastStatus = status;
-                            switch (status) {
-                                case 'begin':
-                                    setProgressStatus('Besteci başlatıldı', 'start', false);
-                                    break;
-                                case 'zemin':
-                                    setProgressStatus('Besteci başlatıldı', 'start', false);
-                                    setTimeout(function () {
-                                        setProgressStatus('Zemin besteleniyor', 'zemin', true);
-                                    }, 500);
-                                    break;
-                                case 'nakarat':
-                                    setProgressStatus('Zemin bestelendi', 'zemin', false);
-                                    setTimeout(function () {
-                                        setProgressStatus('Nakarat besteleniyor', 'nakarat', true);
-                                    }, 500);
-                                    break;
-                                case 'meyan':
-                                    setProgressStatus('Nakarat bestelendi', 'nakarat', false);
-                                    setTimeout(function () {
-                                        setProgressStatus('Meyan besteleniyor', 'meyan', true);
-                                    }, 500);
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    } else if (state === 'SUCCESS') {
-                        let song = JSON.parse(response['status']);
-                        composedSong = song;
-                        console.log('song is:');
-                        console.log(song);
-                        setProgressStatus('Meyan bestelendi', 'meyan', false);
-                        setTimeout(function () {
-                            setProgressStatus('<a onclick="closeProgressBoxAfter(2000);" href="' + song['mu2'] + '" download>İndirme hazır ↯</a>', 'finish', true);
-                        }, 500);
-                    }
-
-                    if (state === 'PENDING' || state === 'PROGRESS') {
-                        setTimeout(function () {
-                            updateCompositionProgress(status_url);
-                        }, 2000);
-                    }
-
-                } else {
-                    toggleProgressError(true);
-                    return false;
-                }
-            };
-            xhr.send();
-        }
-
         function soundButtonClick(e, sender) {
             setTimeout(function () {
                 sender.blur();
@@ -753,22 +539,6 @@
             }, wait);
         }
 
-        function allowNewInsertion(allow) {
-            let toServerBtn = document.getElementById('btnBestele');
-            if (allow) {
-                mParams.allowInsert = true;
-                toServerBtn.style.color = '#ddd';
-                toServerBtn.style.pointerEvents = 'none';
-            } else {
-                mParams.allowInsert = false;
-                toServerBtn.style.color = '';
-                toServerBtn.style.pointerEvents = '';
-                if (document.querySelector('.tmm-menu-btn.dur-btn.clicked')) {
-                    document.querySelector('.tmm-menu-btn.dur-btn.clicked').click();
-                }
-            }
-        }
-
         function createTMMMenu(containerSelector, paper) {
             let tabIndex = 0;
 
@@ -780,7 +550,6 @@
             tabIndex += 1;
             soundBtn.tabIndex = tabIndex;
             soundBtn.className = 'tmm-menu-btn-no';
-            //soundBtn.innerHTML = '<img alt="sound" src="img/sound_off.svg" style="height: 80%;">';
             soundBtn.innerHTML = '<div class="sound"></div>';
             soundBtn.addEventListener('click', function (e) {
                 soundButtonClick(e, this);
@@ -923,7 +692,7 @@
             dvGroupDurs.className = 'btn-group';
 
             let durParams = [
-                //{durVal: 'n1', img: 'nd1.svg'},
+                { durVal: 'n1', img: 'nd1.svg' },
                 { durVal: 'n2', img: 'nd2.svg' },
                 { durVal: 'n4', img: 'nd4.svg' },
                 { durVal: 'n8', img: 'nd8.svg' },
@@ -949,8 +718,8 @@
             dvGroupRests.className = 'btn-group';
 
             let restParams = [
-                //{val: 'r1', dur: '1/1', img: 'rest1.svg'},
-                //{val: 'r2', dur: '1/2', img: 'rest2.svg'},
+                { val: 'r1', dur: '1/1', img: 'rest1.svg' },
+                { val: 'r2', dur: '1/2', img: 'rest2.svg' },
                 { val: 'r4', dur: '1/4', img: 'rest4.svg' },
                 { val: 'r8', dur: '1/8', img: 'rest8.svg' },
                 { val: 'r16', dur: '1/16', img: 'rest16.svg' },
@@ -966,27 +735,11 @@
                 dvGroupRests.appendChild(btn);
             }
 
-            let dvUIBtns = document.createElement('div');
-            dvUIBtns.className = 'btn-group';
-
-            let toServerBtn = document.createElement('div');
-            toServerBtn.id = 'btnBestele';
-            tabIndex += 1;
-            toServerBtn.tabIndex = tabIndex;
-            toServerBtn.className = 'tmm-menu-btn-no';
-            toServerBtn.innerHTML = '<span class="spn-button-text">Bestele!</span>';
-            toServerBtn.addEventListener('click', function (e) {
-                toServerBtnClick(e, this);
-            });
-
-            dvUIBtns.appendChild(toServerBtn);
-
             scoreMenu.appendChild(dvSoundButtons);
             scoreMenu.appendChild(dvGroupGlobals);
             scoreMenu.appendChild(dvGroupAcc);
             scoreMenu.appendChild(dvGroupDurs);
             scoreMenu.appendChild(dvGroupRests);
-            scoreMenu.appendChild(dvUIBtns);
 
             document.querySelector(containerSelector).prepend(scoreMenu);
 
@@ -1481,9 +1234,6 @@
                 this.notes.splice(noteIdx, 1);
                 mParams.totalNoteCount -= 1;
                 mParams.highElem = null;
-                if (mParams.totalNoteCount < 8) {
-                    allowNewInsertion(true);
-                }
                 if (this.isEmpty() && this.arrIdx > 0) {
                     this.eraseMeasure();
                     this.parentSatir.deleteMeasureAtIdx(this.arrIdx, this.startPos, this.lastDrawnWidth);
@@ -1721,14 +1471,10 @@
                 mParams.totalNoteCount += 1;
                 this.refreshMeasure();
 
-                if (mParams.totalNoteCount === 8) {
-                    allowNewInsertion(false);
-                } else {
-                    if (this.isFull() || this.isExceeded()) {
-                        let meter = this.getMeter();
-                        let acci = this.getAccidentalsStr();
-                        this.parentSatir.requestNewMeasure(this.arrIdx, this.startPos + this.lastDrawnWidth, meter, acci);
-                    }
+                if (this.isFull() || this.isExceeded()) {
+                    let meter = this.getMeter();
+                    let acci = this.getAccidentalsStr();
+                    this.parentSatir.requestNewMeasure(this.arrIdx, this.startPos + this.lastDrawnWidth, meter, acci);
                 }
 
                 playNote(note);
@@ -2178,7 +1924,6 @@
             this.paper = Snap('#' + svgID);
 
             createTMMMenu(containerSelector, this.paper);
-            allowNewInsertion(true);
             // eof prep work
 
             let pLeft = this.configs.padding.left;
