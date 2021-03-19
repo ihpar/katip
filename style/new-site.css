@@ -89,6 +89,11 @@ body ::-webkit-scrollbar-thumb:hover {
 
 @media print {
   html,
+  body {
+    background-color: transparent;
+  }
+
+  html,
   body,
   .A4 {
     margin: 0;
@@ -101,11 +106,5 @@ body ::-webkit-scrollbar-thumb:hover {
     width: 0;
     height: 0;
     display: none;
-  }
-
-  html,
-  body {
-    background-color: transparent;
-    height: 100%;
   }
 }
