@@ -348,11 +348,6 @@ body ::-webkit-scrollbar-thumb:hover {
 	src: url("/leland/Leland.otf") format("opentype");
 }
 
-@font-face {
-	font-family: "Leland Text";
-	src: url("/leland/LelandText.otf") format("opentype");
-}
-
 .A4 {
 	width: 210mm;
 	height: 297mm;
