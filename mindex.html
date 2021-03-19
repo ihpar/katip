@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Kâtip</title>
-		<link rel="shortcut icon" href="img/q2.png" />
-		<!-- font -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-			rel="stylesheet"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kâtip</title>
+    <link rel="shortcut icon" href="img/q2.png" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-		<script type="text/javascript" src="js/snap.svg.js"></script>
-		<script type="text/javascript" src="js/soundfont-player.js"></script>
-		<script type="text/javascript" src="js/tune.js"></script>
-		<link rel="stylesheet" href="style/site.css" />
-		<style type="text/css"></style>
-	</head>
-	<body>
-		<div style="display: flex; flex-direction: column; min-height: 100%">
-			<header class="header no-print">
-				<ul style="align-items: center; display: flex; list-style-type: none; margin: 0">
-					<li>
-						<a href="">Nav 1</a>
-					</li>
-					<li>
-						<a href="">Nav 2</a>
-					</li>
-					<li style="margin-left: auto">
-						<a href="">Contact</a>
-					</li>
-				</ul>
-			</header>
+    <script type="text/javascript" src="js/snap.svg.js"></script>
+    <script type="text/javascript" src="js/soundfont-player.js"></script>
+    <script type="text/javascript" src="js/tune.js"></script>
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/new-site.css" />
+    <style type="text/css"></style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; min-height: 100%">
+      <header class="header no-print">
+        <ul style="align-items: center; display: flex; list-style-type: none; margin: 0">
+          <li>
+            <a href="">Nav 1</a>
+          </li>
+          <li>
+            <a href="">Nav 2</a>
+          </li>
+          <li style="margin-left: auto">
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </header>
 
-			<main style="flex-grow: 1; display: flex; flex-direction: row">
-				<aside class="left-nav no-print">Left</aside>
+      <main style="flex-grow: 1; display: flex; flex-direction: row">
+        <aside class="left-nav no-print">Left</aside>
 
-				<!-- Main content -->
-				<article style="flex: 1">
-					<div class="top-menu no-print">
-						<button>Play</button>
-					</div>
-					<div class="A4" style="font-family: 'Leland'; font-size: 40px">
-						<br />
-						&nbsp;
-						<br />
-						<span>&#xE050;</span>
-						<br />
-						&nbsp;
-						<br />
-						<span>&#xE1D9;</span>
-						<br />
-						&nbsp;
-						<br />
-						<span>&#xE442;</span>
-						<br />
-						&nbsp;
-						<br />
-					</div>
-				</article>
+        <!-- Main content -->
+        <article style="display: flex; flex-direction: column; align-items: center; flex: 1">
+          <div class="top-menu no-print">
+            <button>Play</button>
+            <button>Pause</button>
+            <button>Stop</button>
+            <button>Metronome</button>
+          </div>
 
-				<!-- Right sidebar -->
-				<nav class="right-nav no-print">Right</nav>
-			</main>
+          <div class="A4 mus-font">
+            <br />
+            &nbsp;
+            <br />
+            <span>&#xE050;</span>
+            <br />
+            &nbsp;
+            <br />
+            <span>&#xE1D2; &#xE1D3; &#xE1D9; &#xE284; &#xE440; &#xE447; &#xE1DD; &#xE1DA; &#xE1D2;</span>
+            <br />
+            &nbsp;
+            <br />
+            <span>&#xE442;</span>
+            <br />
+            &nbsp;
+            <br />
+            <span>&#xE440;</span>
+            <br />
+            &nbsp;
+            <br />
+          </div>
+        </article>
 
-			<footer class="footer no-print">Footer</footer>
-		</div>
-	</body>
+        <!-- Right sidebar -->
+        <nav class="right-nav no-print">Right</nav>
+      </main>
+
+      <footer class="footer no-print">Footer</footer>
+    </div>
+  </body>
 </html>
