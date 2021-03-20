@@ -1,6 +1,11 @@
+@font-face {
+  font-family: Leland;
+  src: url("/leland/Leland.otf") format("opentype");
+}
+
 html,
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Leland;
   font-size: 16px;
   color: #222;
   height: 100%;
@@ -40,13 +45,20 @@ body ::-webkit-scrollbar-thumb:hover {
   background: rgba(128, 135, 139, 0.8);
 }
 
-@font-face {
-  font-family: Leland;
-  src: url("/leland/Leland.otf") format("opentype");
+h1.song-title {
+  font-size: 36px;
+  margin: 0 auto 18px auto;
+  text-align: center;
+}
+
+h2.composer {
+  font-size: 20px;
+  margin: 0 auto 10px auto;
+  text-align: right;
 }
 
 .top-menu,
-.header,
+.header-section,
 .left-nav,
 .right-nav,
 .footer {
@@ -73,29 +85,35 @@ body ::-webkit-scrollbar-thumb:hover {
   overflow: hidden;
 }
 
-.header {
-  background-color: burlywood;
+.header-section {
+  margin: auto;
+  width: 210mm;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left-nav {
   width: 25%;
-  background-color: cadetblue;
 }
 
 .right-nav {
   width: 25%;
-  background-color: chocolate;
 }
 
 .footer {
-  background-color: cornflowerblue;
 }
 
-.top-menu-list {
+.top-menu-list,
+.user-menu {
   display: flex;
 }
 
 .top-menu-list li:not(:last-child) {
   list-style: none;
   margin-right: 4px;
+}
+
+.paper-contents {
+  margin: 25mm 15mm 20mm 15mm;
 }

@@ -8,10 +8,7 @@
     <link rel="shortcut icon" href="img/q2.png" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
 
     <script type="text/javascript" src="js/snap.svg.js"></script>
     <script type="text/javascript" src="js/soundfont-player.js"></script>
@@ -24,16 +21,74 @@
   </head>
   <body>
     <div style="display: flex; flex-direction: column; min-height: 100%">
-      <header class="header no-print">
-        <ul style="align-items: center; display: flex; list-style-type: none; margin: 0">
+      <header class="header-section no-print">
+        <!-- User account actions -->
+        <ul class="user-menu">
           <li>
-            <a href="">Nav 1</a>
+            <button><span class="material-icons-sharp md-36">account_circle</span></button>
+          </li>
+        </ul>
+        <!-- User file actions -->
+        <ul class="user-menu">
+          <li>
+            <button><span class="material-icons-sharp md-36">note_add</span></button>
           </li>
           <li>
-            <a href="">Nav 2</a>
+            <button><span class="material-icons-sharp md-36">folder_open</span></button>
           </li>
-          <li style="margin-left: auto">
-            <a href="">Contact</a>
+          <li>
+            <button><span class="material-icons-sharp md-36">upload</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">save</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">download</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">print</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">delete_forever</span></button>
+          </li>
+        </ul>
+        <!-- User action controls -->
+        <ul class="user-menu">
+          <li>
+            <button><span class="material-icons-sharp md-36">undo</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">redo</span></button>
+          </li>
+        </ul>
+        <!-- User setting actions -->
+        <ul class="user-menu">
+          <li>
+            <button><span class="material-icons-sharp md-36">dark_mode</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">light_mode</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">flag</span></button>
+          </li>
+        </ul>
+        <!-- User social actions -->
+        <ul class="user-menu">
+          <li>
+            <button><span class="material-icons-sharp md-36">share</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">help</span></button>
+          </li>
+          <li>
+            <button><span class="material-icons-sharp md-36">feedback</span></button>
+          </li>
+        </ul>
+        <!-- User logout -->
+        <ul class="user-menu">
+          <li>
+            <button><span class="material-icons-sharp md-36">logout</span></button>
           </li>
         </ul>
       </header>
@@ -43,6 +98,7 @@
 
         <!-- Main content -->
         <article style="display: flex; flex-direction: column; align-items: center; flex: 1">
+          <!-- Top Menu -->
           <div class="top-menu no-print">
             <!-- Player controls -->
             <ul class="top-menu-list player-controls">
@@ -195,15 +251,15 @@
               </li>
             </ul>
           </div>
-
+          <!-- Pages -->
           <div class="A4">
-            &nbsp;
-            <br /><br />
-            <span class="mus-font"
-              >&#xE1D2; &#xE1D3; &#xE1D9; &#xE284; &#xE440; &#xE447; &#xE1DD; &#xE1DA; &#xE1D2;</span
-            >
-            <br />
-            &nbsp;
+            <div class="paper-contents">
+              <h1 class="song-title">Yine Bir Gülnihâl Aldı Bu Gönlümü</h1>
+              <h2 class="composer">Hammâmîzâde İsmâil Dede Efendi</h2>
+              <div>
+                <img src="/img/gulnihal.svg" style="width: 100%" />
+              </div>
+            </div>
           </div>
         </article>
 
