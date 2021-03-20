@@ -22,13 +22,16 @@
         background-color: #eee;
         color: #444;
         cursor: pointer;
-        padding: 18px;
         width: 100%;
         border: none;
         text-align: left;
         outline: none;
-        font-size: 15px;
+        font-family: inherit;
+        font-size: inherit;
         transition: 200ms;
+        display: flex;
+        align-items: center;
+        padding: 6px 0;
       }
 
       .accordion-active,
@@ -36,17 +39,11 @@
         background-color: #ccc;
       }
 
-      .btn-accordion:after {
-        content: "\25BA";
-        color: #777;
-        font-weight: bold;
-        float: left;
-        margin-right: 6px;
-        display: block;
-        transition: 200ms;
+      .btn-accordion .material-icons-sharp.caret {
+        transition: all 200ms;
       }
 
-      .accordion-active:after {
+      .accordion-active .material-icons-sharp.caret {
         transform: rotate(90deg);
       }
 
@@ -149,7 +146,10 @@
         <!-- Left menu -->
         <aside class="left-nav no-print">
           <div class="left-menu-wrapper">
-            <button class="btn-accordion">Section 1</button>
+            <button class="btn-accordion">
+              <span class="material-icons-sharp caret">arrow_right</span>
+              Section 1
+            </button>
             <div class="accordion-panel">
               <div class="accordion-contents">
                 <p>
@@ -159,19 +159,12 @@
                 </p>
               </div>
             </div>
+            <br />
 
-            <button class="btn-accordion">Section 2</button>
-            <div class="accordion-panel">
-              <div class="accordion-contents">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-
-            <button class="btn-accordion">Section 3</button>
+            <button class="btn-accordion">
+              <span class="material-icons-sharp caret">arrow_right</span>
+              Section 2
+            </button>
             <div class="accordion-panel">
               <div class="accordion-contents">
                 <p>
@@ -349,6 +342,8 @@
               </div>
             </div>
           </div>
+
+          <div class="A4">&nbsp;</div>
         </article>
 
         <!-- Right sidebar -->

@@ -3,9 +3,14 @@
   src: url("/leland/Leland.otf") format("opentype");
 }
 
+@font-face {
+  font-family: LelandText;
+  src: url("/leland/LelandText.otf") format("opentype");
+}
+
 html,
 body {
-  font-family: Leland;
+  font-family: LelandText;
   font-size: 16px;
   color: #222;
   height: 100%;
@@ -59,7 +64,6 @@ h2.composer {
 
 .top-menu,
 .header-section,
-.left-nav,
 .right-nav,
 .footer {
   padding: 6px 0;
@@ -74,12 +78,15 @@ h2.composer {
   width: 210mm;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: cadetblue;
 }
 
 .A4 {
   width: 210mm;
   height: 297mm;
-  margin: 1.4rem 1rem;
+  margin: 24px 16px;
   background-color: #f7f5ea;
   box-shadow: 0 0 30px -20px #141414;
   overflow: hidden;
