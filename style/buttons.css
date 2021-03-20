@@ -1,0 +1,46 @@
+.top-menu-list button {
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom-color 200ms;
+}
+
+.top-menu-list button:hover {
+  border-bottom-color: #666;
+}
+
+.top-menu-list button:focus {
+  border-bottom-color: #222;
+}
+
+.top-menu-list button {
+  padding: 0;
+}
+
+.img-ht {
+  height: 30px;
+  display: block;
+}
+
+.mus-font-span {
+  display: block;
+  font-family: Leland;
+  font-size: 22px;
+  line-height: 50px;
+  height: 30px;
+  overflow: hidden;
+  padding: 0 5px;
+}
+
+.accidental-controls .mus-font-span {
+  font-size: 30px;
+  line-height: 34px;
+}
+
+.rest-controls .mus-font-span {
+  font-size: 22px;
+  line-height: 32px;
+}

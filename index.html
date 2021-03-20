@@ -17,7 +17,9 @@
     <script type="text/javascript" src="js/soundfont-player.js"></script>
     <script type="text/javascript" src="js/tune.js"></script>
     <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/new-site.css" />
+    <link rel="stylesheet" href="style/layout.css" />
+    <link rel="stylesheet" href="style/buttons.css" />
+    <link rel="stylesheet" href="style/print.css" />
     <style type="text/css"></style>
   </head>
   <body>
@@ -42,7 +44,8 @@
         <!-- Main content -->
         <article style="display: flex; flex-direction: column; align-items: center; flex: 1">
           <div class="top-menu no-print">
-            <ul class="top-menu-list">
+            <!-- Player controls -->
+            <ul class="top-menu-list player-controls">
               <li>
                 <button><img class="img-ht" src="/img/controls/sound-off.svg" /></button>
               </li>
@@ -62,50 +65,145 @@
                 <button><img class="img-ht" src="/img/controls/tuning-fork.svg" /></button>
               </li>
             </ul>
+            <!-- Accidental controls -->
+            <ul class="top-menu-list accidental-controls">
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE440;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE260;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE442;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE284;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE261;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE282;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE262;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE446;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE447;</span>
+                </button>
+              </li>
+            </ul>
+            <!-- Duration controls -->
+            <ul class="top-menu-list duration-controls">
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE0A3;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1D3;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1D5;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1D7;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1D9;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1DB;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1DD;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE1E7;</span>
+                </button>
+              </li>
+            </ul>
+            <!-- Rest controls -->
+            <ul class="top-menu-list rest-controls">
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E3;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E4;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E5;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E6;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E7;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E8;</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="mus-font-span">&#xE4E9;</span>
+                </button>
+              </li>
+            </ul>
           </div>
 
-          <div class="A4 mus-font">
+          <div class="A4">
+            &nbsp;
+            <br /><br />
+            <span class="mus-font"
+              >&#xE1D2; &#xE1D3; &#xE1D9; &#xE284; &#xE440; &#xE447; &#xE1DD; &#xE1DA; &#xE1D2;</span
+            >
             <br />
             &nbsp;
-            <br />
-            <span>&#xE050;</span>
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE1D2; &#xE1D3; &#xE1D9; &#xE284; &#xE440; &#xE447; &#xE1DD; &#xE1DA; &#xE1D2;</span>
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE442;</span>
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE440;</span>
-            <br />
-            &nbsp;
-            <br />
-          </div>
-
-          <div class="A4 mus-font">
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE050;</span>
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE1D2; &#xE1D3; &#xE1D9; &#xE284; &#xE440; &#xE447; &#xE1DD; &#xE1DA; &#xE1D2;</span>
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE442;</span>
-            <br />
-            &nbsp;
-            <br />
-            <span>&#xE440;</span>
-            <br />
-            &nbsp;
-            <br />
           </div>
         </article>
 
