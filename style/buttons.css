@@ -3,7 +3,17 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  padding: 0 2px;
+  padding: 0;
+  transition: opacity 200ms;
+}
+
+.user-menu button:hover,
+.user-menu button:focus {
+  opacity: 0.6;
+}
+
+.user-menu li:not(:last-child) {
+  margin-right: 4px;
 }
 
 .material-icons-sharp.md-36 {
@@ -16,16 +26,16 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  border-bottom: 4px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: border-bottom-color 200ms;
 }
 
 .top-menu-list button:hover {
-  border-bottom-color: #666;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
 .top-menu-list button:focus {
-  border-bottom-color: #222;
+  border-bottom-color: rgba(0, 0, 0, 0.6);
 }
 
 .top-menu-list button {
