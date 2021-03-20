@@ -95,6 +95,8 @@ h2.composer {
 
 .left-nav {
   width: 25%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .right-nav {
@@ -102,6 +104,7 @@ h2.composer {
 }
 
 .footer {
+  background-color: aqua;
 }
 
 .top-menu-list,

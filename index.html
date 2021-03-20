@@ -17,7 +17,59 @@
     <link rel="stylesheet" href="style/layout.css" />
     <link rel="stylesheet" href="style/buttons.css" />
     <link rel="stylesheet" href="style/print.css" />
-    <style type="text/css"></style>
+    <style type="text/css">
+      .btn-accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 200ms;
+      }
+
+      .accordion-active,
+      .btn-accordion:hover {
+        background-color: #ccc;
+      }
+
+      .btn-accordion:after {
+        content: "\25BA";
+        color: #777;
+        font-weight: bold;
+        float: left;
+        margin-right: 6px;
+        display: block;
+        transition: 200ms;
+      }
+
+      .accordion-active:after {
+        transform: rotate(90deg);
+      }
+
+      .accordion-panel {
+        padding: 0 16px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 200ms;
+      }
+
+      .accordion-contents {
+        margin: 12px 0;
+      }
+
+      .left-menu-wrapper {
+        width: 250px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+      }
+    </style>
   </head>
   <body>
     <div style="display: flex; flex-direction: column; min-height: 100%">
@@ -94,11 +146,47 @@
       </header>
 
       <main style="flex-grow: 1; display: flex; flex-direction: row">
-        <aside class="left-nav no-print">Left</aside>
+        <!-- Left menu -->
+        <aside class="left-nav no-print">
+          <div class="left-menu-wrapper">
+            <button class="btn-accordion">Section 1</button>
+            <div class="accordion-panel">
+              <div class="accordion-contents">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+
+            <button class="btn-accordion">Section 2</button>
+            <div class="accordion-panel">
+              <div class="accordion-contents">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+
+            <button class="btn-accordion">Section 3</button>
+            <div class="accordion-panel">
+              <div class="accordion-contents">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
 
         <!-- Main content -->
         <article style="display: flex; flex-direction: column; align-items: center; flex: 1">
-          <!-- Top Menu -->
+          <!-- Top menu -->
           <div class="top-menu no-print">
             <!-- Player controls -->
             <ul class="top-menu-list player-controls">
@@ -269,5 +357,21 @@
 
       <footer class="footer no-print">Footer</footer>
     </div>
+    <script>
+      let acc = document.getElementsByClassName("btn-accordion");
+      let i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("accordion-active");
+          let panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
