@@ -1,0 +1,38 @@
+.widget-makam-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fcfbf2;
+  padding: 4px 6px;
+  margin-right: 12px;
+  box-shadow: inset 0 0 16px #fcfbf2;
+  cursor: move;
+  transition: border-color 200ms, box-shadow 200ms, color 200ms;
+}
+
+.widget-makam-item:hover {
+  box-shadow: inset 0 0 26px #fff;
+  border-color: #fff;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.widget-makam-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.widget-makam-img {
+  width: 25%;
+  text-align: right;
+  margin-right: 12px;
+}
+
+.widget-makam-img img {
+  height: 48px;
+}
+
+.content-scroller {
+  overflow-y: scroll;
+}
+
+.content-scroller.makam {
+  height: 200px;
+}

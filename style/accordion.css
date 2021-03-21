@@ -32,7 +32,7 @@
 }
 
 .accordion-panel {
-  padding: 0 16px;
+  padding: 0 12px;
   background-color: #f7f5ea;
   max-height: 0;
   overflow: hidden;
