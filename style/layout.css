@@ -126,11 +126,6 @@ h2.composer {
   display: flex;
 }
 
-.top-menu-list li:not(:last-child) {
-  list-style: none;
-  margin-right: 4px;
-}
-
 .paper-contents {
   margin: 25mm 15mm 20mm 15mm;
 }
