@@ -18,7 +18,34 @@
     <link rel="stylesheet" href="style/buttons.css" />
     <link rel="stylesheet" href="style/accordion.css" />
     <link rel="stylesheet" href="style/print.css" />
-    <style type="text/css"></style>
+    <style type="text/css">
+      .assistant.accordion-wrapper {
+        width: 250px;
+        position: sticky;
+        top: 0;
+      }
+
+      .assistant-title {
+        background-color: #f9f8ef;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-family: inherit;
+        font-size: inherit;
+        display: flex;
+        align-items: center;
+        padding: 6px;
+      }
+
+      .assistant-title-icon {
+        margin-right: 6px;
+      }
+
+      .assistant-body {
+        padding: 12px 16px;
+        background-color: #f7f5ea;
+      }
+    </style>
   </head>
   <body>
     <div style="display: flex; flex-direction: column; min-height: 100%">
@@ -304,26 +331,19 @@
         </article>
 
         <!-- Right sidebar -->
-        <nav class="right-nav no-print">Right</nav>
+        <nav class="right-nav no-print">
+          <div class="assistant accordion-wrapper">
+            <div class="assistant-title">
+              <span class="material-icons-sharp assistant-title-icon">assistant</span>
+              Asistan
+            </div>
+            <div class="assistant-body">Lorem ipsum</div>
+          </div>
+        </nav>
       </main>
 
       <footer class="footer no-print">Footer</footer>
     </div>
-    <script>
-      let acc = document.getElementsByClassName("btn-accordion");
-      let i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("accordion-active");
-          let panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
+    <script type="text/javascript" src="/js/accordion.js"></script>
   </body>
 </html>
