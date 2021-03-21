@@ -45,6 +45,32 @@
         padding: 12px 16px;
         background-color: #f7f5ea;
       }
+
+      .search-section {
+        margin-bottom: 12px;
+      }
+
+      .txt-input {
+        font-family: inherit;
+        font-size: 16px;
+        padding: 6px;
+        border: none 0px;
+        outline: none;
+        width: 100%;
+        height: 28px;
+        box-sizing: border-box;
+      }
+
+      .material-icons-sharp.search-icon {
+        position: absolute;
+        margin: 2px 0 0 -24px;
+      }
+
+      .assistant-link {
+        color: inherit;
+        font-weight: bold;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -335,9 +361,28 @@
           <div class="assistant accordion-wrapper">
             <div class="assistant-title">
               <span class="material-icons-sharp assistant-title-icon">assistant</span>
-              Asistan
+              Çırak
             </div>
-            <div class="assistant-body">Lorem ipsum</div>
+            <div class="assistant-body">
+              <div class="search-section">
+                <input type="text" class="txt-input" placeholder="Ara..." />
+                <span class="material-icons-sharp search-icon">search</span>
+              </div>
+              <div class="info-section">
+                Rast çıkıcı bir makamdır. Durağı SOL sesi, güçlüsü beşinci derecesindeki RE sesidir.
+                <br />
+                Dizisi şu şekildedir: SOL-LA-Sİ (koma bemol)-DO-RE-Mİ-FA (bakiye diyez)-SOL Perdelerin Türk Müziğindeki
+                isimleri şöyledir: Râst, Dügâh, Segâh, Çârgâh, Nevâ, Hüseynî, Evic, Gerdâniye.
+                <br /><br />
+                Rast makamına durak sesinden başlanır, ya durakta veya güçlüde asma karar yapılır sonra tizdeki
+                dörtlüsünde de gezinildikten sonra durak sesi olan SOL ile karar verilir.
+                <br />
+                <br />
+                <a class="assistant-link" target="_blank" href="https://tr.wikipedia.org/wiki/Rast_(makam)">
+                  Devamı...
+                </a>
+              </div>
+            </div>
           </div>
         </nav>
       </main>
