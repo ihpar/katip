@@ -15,85 +15,99 @@
     <script type="text/javascript" src="js/tune.js"></script>
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/layout.css" />
+    <link rel="stylesheet" href="style/hamburgers.css" />
     <link rel="stylesheet" href="style/buttons.css" />
     <link rel="stylesheet" href="style/accordion.css" />
     <link rel="stylesheet" href="style/assistant.css" />
     <link rel="stylesheet" href="style/widgets.css" />
     <link rel="stylesheet" href="style/print.css" />
-    <style type="text/css"></style>
+    <style type="text/css">
+    </style>
   </head>
   <body>
     <div style="display: flex; flex-direction: column; min-height: 100%">
-      <header class="header-section no-print">
-        <!-- User account actions -->
-        <ul class="user-menu">
-          <li>
-            <button><span class="material-icons-sharp md-36">account_circle</span></button>
-          </li>
-        </ul>
-        <!-- User file actions -->
-        <ul class="user-menu">
-          <li>
-            <button><span class="material-icons-sharp md-36">note_add</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">folder_open</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">upload</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">save</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">download</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">print</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">delete_forever</span></button>
-          </li>
-        </ul>
-        <!-- User action controls -->
-        <ul class="user-menu">
-          <li>
-            <button><span class="material-icons-sharp md-36">undo</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">redo</span></button>
-          </li>
-        </ul>
-        <!-- User setting actions -->
-        <ul class="user-menu">
-          <li>
-            <button><span class="material-icons-sharp md-36">dark_mode</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">light_mode</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">flag</span></button>
-          </li>
-        </ul>
-        <!-- User social actions -->
-        <ul class="user-menu">
-          <li>
-            <button><span class="material-icons-sharp md-36">share</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">help</span></button>
-          </li>
-          <li>
-            <button><span class="material-icons-sharp md-36">feedback</span></button>
-          </li>
-        </ul>
-        <!-- User logout -->
-        <ul class="user-menu">
-          <li>
-            <button><span class="material-icons-sharp md-36">logout</span></button>
-          </li>
-        </ul>
+      <header id="header-menu" class="header-section no-print">
+        <div>
+          <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="user-menu-clipper">
+          <div class="user-menu-wrap">
+            <!-- User account actions -->
+            <ul class="user-menu">
+              <li>
+                <button><span class="material-icons-sharp md-36">account_circle</span></button>
+              </li>
+            </ul>
+            <!-- User file actions -->
+            <ul class="user-menu">
+              <li>
+                <button><span class="material-icons-sharp md-36">note_add</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">folder_open</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">upload</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">save</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">download</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">print</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">delete_forever</span></button>
+              </li>
+            </ul>
+            <!-- User action controls -->
+            <ul class="user-menu">
+              <li>
+                <button><span class="material-icons-sharp md-36">undo</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">redo</span></button>
+              </li>
+            </ul>
+            <!-- User setting actions -->
+            <ul class="user-menu">
+              <li>
+                <button><span class="material-icons-sharp md-36">dark_mode</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">light_mode</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">flag</span></button>
+              </li>
+            </ul>
+            <!-- User social actions -->
+            <ul class="user-menu">
+              <li>
+                <button><span class="material-icons-sharp md-36">share</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">help</span></button>
+              </li>
+              <li>
+                <button><span class="material-icons-sharp md-36">feedback</span></button>
+              </li>
+            </ul>
+            <!-- User logout -->
+            <ul class="user-menu">
+              <li>
+                <button><span class="material-icons-sharp md-36">logout</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
 
       <main style="flex-grow: 1; display: flex; flex-direction: row">
@@ -103,11 +117,11 @@
             <!-- Left menu items -->
             <!-- Makam widget -->
             <div class="accordion-wrapper">
-              <button class="btn-accordion">
+              <button class="btn-accordion accordion-active">
                 <span class="material-icons-sharp caret">arrow_right</span>
                 Makam
               </button>
-              <div class="accordion-panel">
+              <div class="accordion-panel" style="max-height: 224px">
                 <div class="accordion-contents">
                   <div class="content-scroller makam">
                     <ul>
@@ -201,7 +215,7 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-contents">
-                  <div class="accordion-buttons-wrap">
+                  <div class="accordion-buttons-grid grid-3">
                     <button>
                       <span class="material-icons-sharp">auto_fix_high</span>
                       <span class="widget-icon-button-text">Oto</span>
@@ -224,7 +238,7 @@
               </button>
               <div class="accordion-panel">
                 <div class="accordion-contents">
-                  <div class="accordion-buttons-wrap">
+                  <div class="accordion-buttons-grid grid-4">
                     <button>
                       <span class="braura-font-span">&#xE040;</span>
                     </button>
@@ -237,9 +251,6 @@
                     <button>
                       <span class="braura-font-span">&#xE032;</span>
                     </button>
-                  </div>
-
-                  <div class="accordion-buttons-wrap" style="margin-top: 6px">
                     <button>
                       <span class="braura-font-span">&#xE500;</span>
                     </button>
@@ -462,5 +473,17 @@
       <footer class="footer no-print">Footer</footer>
     </div>
     <script type="text/javascript" src="/js/accordion.js"></script>
+    <script type="text/javascript">
+      let hamburger = document.querySelector(".hamburger");
+      let userMenu = document.querySelector(".user-menu-wrap");
+      hamburger.addEventListener(
+        "click",
+        function () {
+          this.classList.toggle("is-active");
+          userMenu.classList.toggle("user-menu-visible");
+        },
+        false
+      );
+    </script>
   </body>
 </html>

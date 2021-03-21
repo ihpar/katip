@@ -47,3 +47,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+.accordion-buttons-grid {
+  display: grid;
+  grid-gap: 6px;
+}
+
+.grid-3 {
+  grid-template-columns: auto auto auto;
+}
+
+.grid-4 {
+  grid-template-columns: auto auto auto auto;
+}

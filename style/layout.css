@@ -102,6 +102,30 @@ h2.composer {
   padding: 24px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.user-menu-wrap {
+  display: flex;
+  width: 190mm;
+  justify-content: space-between;
+  position: relative;
+  left: -195mm;
+  opacity: 0;
+  transition: left 600ms ease, opacity 300ms;
+}
+
+.user-menu-visible {
+  left: 0;
+  opacity: 1;
+  transition: left 300ms ease, opacity 600ms;
+}
+
+.user-menu-clipper {
+  display: flex;
+  justify-content: space-between;
+  width: 190mm;
+  overflow: hidden;
 }
 
 .left-nav {
