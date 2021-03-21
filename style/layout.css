@@ -8,6 +8,11 @@
   src: url("/leland/LelandText.otf") format("opentype");
 }
 
+@font-face {
+  font-family: BravuraText;
+  src: url("/leland/BravuraText.woff");
+}
+
 html,
 body {
   font-family: LelandText;

@@ -55,6 +55,13 @@
   padding: 0 5px;
 }
 
+.braura-font-span {
+  font-family: BravuraText;
+  line-height: 30px;
+  font-size: 30px;
+  display: block;
+}
+
 .accidental-controls .mus-font-span {
   font-size: 30px;
   line-height: 34px;
