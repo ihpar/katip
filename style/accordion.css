@@ -42,3 +42,8 @@
 .accordion-contents {
   margin: 12px 0;
 }
+
+.accordion-buttons-wrap {
+  display: flex;
+  justify-content: space-between;
+}
