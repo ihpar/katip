@@ -62,7 +62,6 @@ h2.composer {
   text-align: right;
 }
 
-.top-menu,
 .header-section,
 .right-nav,
 .footer {
@@ -76,11 +75,12 @@ h2.composer {
 
 .top-menu {
   width: 210mm;
+  background-color: #f7f5ea;
+  box-shadow: 0 0 14px -12px #141414;
   display: flex;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background-color: cadetblue;
 }
 
 .A4 {
@@ -88,7 +88,7 @@ h2.composer {
   height: 297mm;
   margin: 24px 16px;
   background-color: #f7f5ea;
-  box-shadow: 0 0 30px -20px #141414;
+  box-shadow: 0 0 24px -20px #141414;
   overflow: hidden;
 }
 
@@ -104,6 +104,14 @@ h2.composer {
   width: 25%;
   display: flex;
   justify-content: flex-end;
+}
+
+.left-menu-wrapper {
+  width: 250px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
 
 .right-nav {

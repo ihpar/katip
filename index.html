@@ -16,57 +16,9 @@
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/layout.css" />
     <link rel="stylesheet" href="style/buttons.css" />
+    <link rel="stylesheet" href="style/accordion.css" />
     <link rel="stylesheet" href="style/print.css" />
-    <style type="text/css">
-      .btn-accordion {
-        background-color: #eee;
-        color: #444;
-        cursor: pointer;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-family: inherit;
-        font-size: inherit;
-        transition: 200ms;
-        display: flex;
-        align-items: center;
-        padding: 6px 0;
-      }
-
-      .accordion-active,
-      .btn-accordion:hover {
-        background-color: #ccc;
-      }
-
-      .btn-accordion .material-icons-sharp.caret {
-        transition: all 200ms;
-      }
-
-      .accordion-active .material-icons-sharp.caret {
-        transform: rotate(90deg);
-      }
-
-      .accordion-panel {
-        padding: 0 16px;
-        background-color: white;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 200ms;
-      }
-
-      .accordion-contents {
-        margin: 12px 0;
-      }
-
-      .left-menu-wrapper {
-        width: 250px;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        align-self: flex-start;
-      }
-    </style>
+    <style type="text/css"></style>
   </head>
   <body>
     <div style="display: flex; flex-direction: column; min-height: 100%">
@@ -146,34 +98,39 @@
         <!-- Left menu -->
         <aside class="left-nav no-print">
           <div class="left-menu-wrapper">
-            <button class="btn-accordion">
-              <span class="material-icons-sharp caret">arrow_right</span>
-              Section 1
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-contents">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.
-                </p>
+            <!-- Left menu items -->
+            <div class="accordion-wrapper">
+              <button class="btn-accordion">
+                <span class="material-icons-sharp caret">arrow_right</span>
+                Makam
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-contents">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
               </div>
             </div>
-            <br />
 
-            <button class="btn-accordion">
-              <span class="material-icons-sharp caret">arrow_right</span>
-              Section 2
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-contents">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.
-                </p>
+            <div class="accordion-wrapper">
+              <button class="btn-accordion">
+                <span class="material-icons-sharp caret">arrow_right</span>
+                Usûl
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-contents">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
               </div>
             </div>
+            <!-- Eof left menu items -->
           </div>
         </aside>
 
