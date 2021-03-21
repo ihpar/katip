@@ -1,0 +1,81 @@
+.assistant.accordion-wrapper {
+  width: 250px;
+  position: sticky;
+  top: 0;
+}
+
+.assistant-title {
+  background-color: #f9f8ef;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+.assistant-title-icon {
+  margin-right: 6px;
+}
+
+.assistant-body {
+  padding: 12px 16px;
+  background-color: #f7f5ea;
+}
+
+.search-section {
+  margin-bottom: 12px;
+}
+
+.txt-input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 16px;
+  padding: 6px 24px 6px 0;
+  border: none 0px;
+  outline: none;
+  width: 100%;
+  height: 28px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.material-icons-sharp.search-icon {
+  position: absolute;
+  margin: 3px 0 0 -22px;
+  opacity: 0.4;
+  transition: opacity 200ms;
+}
+
+.txt-input:focus + span.material-icons-sharp.search-icon {
+  opacity: 1;
+}
+
+.text-underline {
+  height: 2px;
+  width: 35px;
+  background-color: rgba(34, 34, 34, 0.4);
+  display: inline-block;
+  transition: width 200ms, background-color 200ms;
+  position: relative;
+  top: -13px;
+}
+
+.txt-input:focus ~ div.text-underline {
+  width: 100%;
+  background-color: rgba(34, 34, 34, 1);
+}
+
+.assistant-link {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: opacity 200ms;
+}
+
+.assistant-link:hover,
+.assistant-link:focus {
+  opacity: 0.6;
+}
