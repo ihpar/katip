@@ -1,16 +1,16 @@
 @font-face {
   font-family: Leland;
-  src: url("/leland/Leland.otf") format("opentype");
+  src: url("../leland/Leland.otf") format("opentype");
 }
 
 @font-face {
   font-family: LelandText;
-  src: url("/leland/LelandText.otf") format("opentype");
+  src: url("../leland/LelandText.otf") format("opentype");
 }
 
 @font-face {
   font-family: BravuraText;
-  src: url("/leland/BravuraText.woff");
+  src: url("../leland/BravuraText.woff");
 }
 
 html,
