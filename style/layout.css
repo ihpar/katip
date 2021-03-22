@@ -132,6 +132,7 @@ h2.composer {
   width: 25%;
   display: flex;
   justify-content: flex-end;
+  flex: 1;
 }
 
 .left-menu-wrapper {
@@ -144,10 +145,10 @@ h2.composer {
 
 .right-nav {
   width: 25%;
+  flex: 1;
 }
 
 .footer {
-  background-color: aqua;
 }
 
 .top-menu-list,

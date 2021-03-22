@@ -27,6 +27,7 @@
 
 .search-section {
   margin-bottom: 12px;
+  position: relative;
 }
 
 .txt-input {
@@ -44,7 +45,9 @@
 
 .material-icons-sharp.search-icon {
   position: absolute;
-  margin: 3px 0 0 -22px;
+  /*margin: 3px 0 0 -22px;*/
+  top: 0;
+  right: 0;
   opacity: 0.4;
   transition: opacity 200ms;
 }
