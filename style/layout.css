@@ -129,6 +129,7 @@ h2.composer {
 }
 
 .left-nav {
+  min-width: 270px;
   width: 25%;
   display: flex;
   justify-content: flex-end;
@@ -144,6 +145,7 @@ h2.composer {
 }
 
 .right-nav {
+  min-width: 270px;
   width: 25%;
   flex: 1;
 }
