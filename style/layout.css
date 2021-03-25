@@ -85,12 +85,14 @@ h2.composer {
   justify-content: space-between;
   position: sticky;
   top: 0;
+  margin: 0 auto;
 }
 
 .A4 {
   width: 210mm;
   height: 297mm;
-  margin: 24px 16px;
+  /* margin: 24px 16px; */
+  margin: 24px auto;
   background-color: #f7f5ea;
   box-shadow: 0 0 24px -20px #141414;
   overflow: hidden;
@@ -103,6 +105,15 @@ h2.composer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.head-wrap {
+  display: flex;
+}
+
+.head-space {
+  flex: 1;
+  min-width: 286px;
 }
 
 .user-menu-wrap {
@@ -141,7 +152,7 @@ h2.composer {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
 .right-nav {
@@ -152,6 +163,8 @@ h2.composer {
 
 .footer {
   background-color: transparent;
+  width: 210mm;
+  margin: 0 auto;
 }
 
 .top-menu-list,
