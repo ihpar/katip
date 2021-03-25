@@ -55,6 +55,18 @@ body ::-webkit-scrollbar-thumb:hover {
   background: rgba(128, 135, 139, 0.8);
 }
 
+.page-grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 230mm 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 6px 6px;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+}
+
 h1.song-title {
   font-size: 36px;
   margin: 0 auto 18px auto;
@@ -91,7 +103,6 @@ h2.composer {
 .A4 {
   width: 210mm;
   height: 297mm;
-  /* margin: 24px 16px; */
   margin: 24px auto;
   background-color: #f7f5ea;
   box-shadow: 0 0 24px -20px #141414;
@@ -152,7 +163,6 @@ h2.composer {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  /* align-self: flex-start; */
 }
 
 .right-nav {

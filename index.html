@@ -9,32 +9,14 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
-
-    <script type="text/javascript" src="js/snap.svg.js"></script>
-    <script type="text/javascript" src="js/soundfont-player.js"></script>
-    <script type="text/javascript" src="js/tune.js"></script>
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/layout.css" />
-    <link rel="stylesheet" href="style/hamburgers.css" />
-    <link rel="stylesheet" href="style/buttons.css" />
-    <link rel="stylesheet" href="style/accordion.css" />
-    <link rel="stylesheet" href="style/assistant.css" />
-    <link rel="stylesheet" href="style/widgets.css" />
-    <link rel="stylesheet" href="style/print.css" />
-    <style type="text/css">
-      .head-wrap {
-        display: flex;
-      }
-      .head-space {
-        flex: 1;
-        min-width: 286px;
-      }
-    </style>
+    <!-- styles -->
+    <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
-    <div style="display: flex; flex-direction: column; min-height: 100%">
-      <div class="head-wrap">
-        <div class="head-space"></div>
+    <div class="page-grid">
+      <!-- Header Section-->
+      <div></div>
+      <div>
         <header id="header-menu" class="header-section no-print">
           <div>
             <button class="hamburger hamburger--squeeze" type="button">
@@ -118,381 +100,388 @@
             </div>
           </div>
         </header>
-        <div class="head-space"></div>
       </div>
+      <div></div>
+      <!-- End Header Section-->
 
-      <main style="flex-grow: 1; display: flex; flex-direction: row">
-        <!-- Left menu -->
-        <aside class="left-nav no-print">
-          <div class="left-menu-wrapper">
-            <!-- Left menu items -->
-            <!-- Makam widget -->
-            <div class="accordion-wrapper">
-              <button class="btn-accordion accordion-active">
-                <span class="material-icons-sharp caret">arrow_right</span>
-                Makam
-              </button>
-              <div class="accordion-panel" style="max-height: 224px">
-                <div class="accordion-contents">
-                  <div class="content-scroller makam">
-                    <ul>
-                      <li class="widget-list-item">
-                        <div class="widget-makam-img"><img src="img/makamlar/aa.png" /></div>
-                        <div class="widget-makam-name">Acemaşîran</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-makam-img"><img src="img/makamlar/aa.png" /></div>
-                        <div class="widget-makam-name">Acemkürdî</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-makam-img"><img src="img/makamlar/bes.png" /></div>
-                        <div class="widget-makam-name">Bestenigâr</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-makam-img"><img src="img/makamlar/bey.png" /></div>
-                        <div class="widget-makam-name">Beyâtî</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-makam-img"><img src="img/makamlar/bey-arab.png" /></div>
-                        <div class="widget-makam-name">Beyâtî Araban</div>
-                      </li>
-                    </ul>
-                  </div>
+      <!-- Main Section -->
+
+      <!-- Left menu -->
+      <div style="justify-self: end">
+        <div class="left-menu-wrapper">
+          <!-- Left menu items -->
+          <!-- Makam widget -->
+          <div class="accordion-wrapper">
+            <button class="btn-accordion accordion-active">
+              <span class="material-icons-sharp caret">arrow_right</span>
+              Makam
+            </button>
+            <div class="accordion-panel" style="max-height: 224px">
+              <div class="accordion-contents">
+                <div class="content-scroller makam">
+                  <ul>
+                    <li class="widget-list-item">
+                      <div class="widget-makam-img"><img src="img/makamlar/aa.png" /></div>
+                      <div class="widget-makam-name">Acemaşîran</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-makam-img"><img src="img/makamlar/aa.png" /></div>
+                      <div class="widget-makam-name">Acemkürdî</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-makam-img"><img src="img/makamlar/bes.png" /></div>
+                      <div class="widget-makam-name">Bestenigâr</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-makam-img"><img src="img/makamlar/bey.png" /></div>
+                      <div class="widget-makam-name">Beyâtî</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-makam-img"><img src="img/makamlar/bey-arab.png" /></div>
+                      <div class="widget-makam-name">Beyâtî Araban</div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <!-- Usul widget -->
-            <div class="accordion-wrapper">
-              <button class="btn-accordion">
-                <span class="material-icons-sharp caret">arrow_right</span>
-                Usûl
-              </button>
-              <div class="accordion-panel">
-                <div class="accordion-contents">
-                  <div class="content-scroller usul">
-                    <ul>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="2" bottom="8"></div>
-                        </div>
-                        <div class="widget-usul-name">Nim Sofyan</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="2" bottom="4"></div>
-                        </div>
-                        <div class="widget-usul-name">Nim Sofyan</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="3" bottom="8"></div>
-                        </div>
-                        <div class="widget-usul-name">Semâî</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="3" bottom="4"></div>
-                        </div>
-                        <div class="widget-usul-name">Semâî</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="4" bottom="4"></div>
-                        </div>
-                        <div class="widget-usul-name">Sofyan</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="7" bottom="18"></div>
-                        </div>
-                        <div class="widget-usul-name">Devr-i Tûran</div>
-                      </li>
-                      <li class="widget-list-item">
-                        <div class="widget-usul-rep">
-                          <div class="fraction" top="10" bottom="8"></div>
-                        </div>
-                        <div class="widget-usul-name">Aksak Semâî</div>
-                      </li>
-                    </ul>
-                  </div>
+          </div>
+          <!-- Usul widget -->
+          <div class="accordion-wrapper">
+            <button class="btn-accordion">
+              <span class="material-icons-sharp caret">arrow_right</span>
+              Usûl
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-contents">
+                <div class="content-scroller usul">
+                  <ul>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="2" bottom="8"></div>
+                      </div>
+                      <div class="widget-usul-name">Nim Sofyan</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="2" bottom="4"></div>
+                      </div>
+                      <div class="widget-usul-name">Nim Sofyan</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="3" bottom="8"></div>
+                      </div>
+                      <div class="widget-usul-name">Semâî</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="3" bottom="4"></div>
+                      </div>
+                      <div class="widget-usul-name">Semâî</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="4" bottom="4"></div>
+                      </div>
+                      <div class="widget-usul-name">Sofyan</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="7" bottom="18"></div>
+                      </div>
+                      <div class="widget-usul-name">Devr-i Tûran</div>
+                    </li>
+                    <li class="widget-list-item">
+                      <div class="widget-usul-rep">
+                        <div class="fraction" top="10" bottom="8"></div>
+                      </div>
+                      <div class="widget-usul-name">Aksak Semâî</div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <!-- Grup widget -->
-            <div class="accordion-wrapper">
-              <button class="btn-accordion">
-                <span class="material-icons-sharp caret">arrow_right</span>
-                Nota Gruplama
-              </button>
-              <div class="accordion-panel">
-                <div class="accordion-contents">
-                  <div class="accordion-buttons-grid grid-3">
-                    <button>
-                      <span class="material-icons-sharp">auto_fix_high</span>
-                      <span class="widget-icon-button-text">Oto</span>
-                    </button>
-                    <button>
-                      <span class="mus-font-span">&#xE1D7;</span>
-                    </button>
-                    <button>
-                      <img class="img-ht" style="height: 28px" src="img/controls/beamed-notes.svg" />
-                    </button>
-                  </div>
+          </div>
+          <!-- Grup widget -->
+          <div class="accordion-wrapper">
+            <button class="btn-accordion">
+              <span class="material-icons-sharp caret">arrow_right</span>
+              Nota Gruplama
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-contents">
+                <div class="accordion-buttons-grid grid-3">
+                  <button>
+                    <span class="material-icons-sharp">auto_fix_high</span>
+                    <span class="widget-icon-button-text">Oto</span>
+                  </button>
+                  <button>
+                    <span class="mus-font-span">&#xE1D7;</span>
+                  </button>
+                  <button>
+                    <img class="img-ht" style="height: 28px" src="img/controls/beamed-notes.svg" />
+                  </button>
                 </div>
               </div>
             </div>
-            <!-- Repeats & jumps widget -->
-            <div class="accordion-wrapper">
-              <button class="btn-accordion">
-                <span class="material-icons-sharp caret">arrow_right</span>
-                Akış İşaretleri
-              </button>
-              <div class="accordion-panel">
-                <div class="accordion-contents">
-                  <div class="accordion-buttons-grid grid-4">
-                    <button>
-                      <span class="braura-font-span">&#xE040;</span>
-                    </button>
-                    <button>
-                      <span class="braura-font-span">&#xE041;</span>
-                    </button>
-                    <button>
-                      <span class="braura-font-span">&#xE042;</span>
-                    </button>
-                    <button>
-                      <span class="braura-font-span">&#xE032;</span>
-                    </button>
-                    <button>
-                      <span class="braura-font-span">&#xE500;</span>
-                    </button>
-                    <button>
-                      <span class="braura-font-span">&#xE047;</span>
-                    </button>
-                    <button>
-                      <span class="braura-font-span">&#xE048;</span>
-                    </button>
-                  </div>
+          </div>
+          <!-- Repeats & jumps widget -->
+          <div class="accordion-wrapper">
+            <button class="btn-accordion">
+              <span class="material-icons-sharp caret">arrow_right</span>
+              Akış İşaretleri
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-contents">
+                <div class="accordion-buttons-grid grid-4">
+                  <button>
+                    <span class="braura-font-span">&#xE040;</span>
+                  </button>
+                  <button>
+                    <span class="braura-font-span">&#xE041;</span>
+                  </button>
+                  <button>
+                    <span class="braura-font-span">&#xE042;</span>
+                  </button>
+                  <button>
+                    <span class="braura-font-span">&#xE032;</span>
+                  </button>
+                  <button>
+                    <span class="braura-font-span">&#xE500;</span>
+                  </button>
+                  <button>
+                    <span class="braura-font-span">&#xE047;</span>
+                  </button>
+                  <button>
+                    <span class="braura-font-span">&#xE048;</span>
+                  </button>
                 </div>
               </div>
             </div>
-            <!-- Eof left menu items -->
           </div>
-        </aside>
+          <!-- Eof left menu items -->
+        </div>
+      </div>
+      <!-- End Left menu -->
 
-        <!-- Main content -->
-        <article style="display: flex; flex-direction: column; align-items: center; flex: 1; max-width: 250mm">
-          <!-- Top menu -->
-          <div class="top-menu no-print">
-            <!-- Player controls -->
-            <ul class="top-menu-list player-controls">
-              <li>
-                <button><img class="img-ht" src="img/controls/sound-off.svg" /></button>
-              </li>
-              <li>
-                <button><img class="img-ht" src="img/controls/rewind.svg" /></button>
-              </li>
-              <li>
-                <button><img class="img-ht" src="img/controls/play.svg" /></button>
-              </li>
-              <li>
-                <button><img class="img-ht" src="img/controls/repeat.svg" /></button>
-              </li>
-              <li>
-                <button><img class="img-ht" src="img/controls/metronome.svg" /></button>
-              </li>
-              <li>
-                <button><img class="img-ht" src="img/controls/tuning-fork.svg" /></button>
-              </li>
-            </ul>
-            <!-- Accidental controls -->
-            <ul class="top-menu-list accidental-controls">
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE440;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE260;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE442;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE284;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE261;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE282;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE262;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE446;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE447;</span>
-                </button>
-              </li>
-            </ul>
-            <!-- Duration controls -->
-            <ul class="top-menu-list duration-controls">
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE0A3;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1D3;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1D5;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1D7;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1D9;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1DB;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1DD;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE1E7;</span>
-                </button>
-              </li>
-            </ul>
-            <!-- Rest controls -->
-            <ul class="top-menu-list rest-controls">
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E3;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E4;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E5;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E6;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E7;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E8;</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="mus-font-span">&#xE4E9;</span>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <!-- Sheets -->
-          <div class="A4">
-            <div class="paper-contents">
-              <h1 class="song-title">Yine Bir Gülnihâl Aldı Bu Gönlümü</h1>
-              <h2 class="composer">Hammâmîzâde İsmâil Dede Efendi</h2>
-              <div>
-                <img src="img/gulnihal.svg" style="width: 100%" />
-              </div>
+      <!-- Main Center Content -->
+      <div>
+        <!-- Top menu -->
+        <div class="top-menu no-print">
+          <!-- Player controls -->
+          <ul class="top-menu-list player-controls">
+            <li>
+              <button><img class="img-ht" src="img/controls/sound-off.svg" /></button>
+            </li>
+            <li>
+              <button><img class="img-ht" src="img/controls/rewind.svg" /></button>
+            </li>
+            <li>
+              <button><img class="img-ht" src="img/controls/play.svg" /></button>
+            </li>
+            <li>
+              <button><img class="img-ht" src="img/controls/repeat.svg" /></button>
+            </li>
+            <li>
+              <button><img class="img-ht" src="img/controls/metronome.svg" /></button>
+            </li>
+            <li>
+              <button><img class="img-ht" src="img/controls/tuning-fork.svg" /></button>
+            </li>
+          </ul>
+          <!-- Accidental controls -->
+          <ul class="top-menu-list accidental-controls">
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE440;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE260;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE442;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE284;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE261;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE282;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE262;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE446;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE447;</span>
+              </button>
+            </li>
+          </ul>
+          <!-- Duration controls -->
+          <ul class="top-menu-list duration-controls">
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE0A3;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1D3;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1D5;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1D7;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1D9;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1DB;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1DD;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE1E7;</span>
+              </button>
+            </li>
+          </ul>
+          <!-- Rest controls -->
+          <ul class="top-menu-list rest-controls">
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E3;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E4;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E5;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E6;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E7;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E8;</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="mus-font-span">&#xE4E9;</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- Sheets -->
+        <div class="A4">
+          <div class="paper-contents">
+            <h1 class="song-title">Yine Bir Gülnihâl Aldı Bu Gönlümü</h1>
+            <h2 class="composer">Hammâmîzâde İsmâil Dede Efendi</h2>
+            <div>
+              <img src="img/gulnihal.svg" style="width: 100%" />
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Assistant sidebar -->
-        <nav class="right-nav no-print">
-          <div class="assistant accordion-wrapper">
-            <div class="assistant-title">
-              <span class="material-icons-sharp assistant-title-icon">assistant</span>
-              Çırak
+        <div class="A4"></div>
+      </div>
+      <!-- End Main Center Content -->
+
+      <!-- Right menu -->
+      <div>
+        <div class="assistant accordion-wrapper">
+          <div class="assistant-title">
+            <span class="material-icons-sharp assistant-title-icon">assistant</span>
+            Çırak
+          </div>
+          <div class="assistant-body">
+            <div class="search-section">
+              <input type="text" class="txt-input" placeholder="Ara..." />
+              <span class="material-icons-sharp search-icon">search</span>
+              <br />
+              <div class="text-underline"></div>
             </div>
-            <div class="assistant-body">
-              <div class="search-section">
-                <input type="text" class="txt-input" placeholder="Ara..." />
-                <span class="material-icons-sharp search-icon">search</span>
-                <br />
-                <div class="text-underline"></div>
-              </div>
-              <div class="info-section">
-                Rast çıkıcı bir makamdır. Durağı Sol sesi, güçlüsü beşinci derecesindeki Re sesidir.
-                <br /><br />
-                Dizisi şu şekildedir: Sol, La, Si (koma bemol), Do, Re, Mi, Fa (bakiye diyez) ve Sol. Perdelerin Türk
-                Müziği'ndeki isimleri şöyledir: Râst, Dügâh, Segâh, Çârgâh, Nevâ, Hüseynî, Evic, Gerdâniye.
-                <br /><br />
-                Rast makamına durak sesinden başlanır, ya durakta veya güçlüde asma karar yapılır sonra tizdeki
-                dörtlüsünde de gezinildikten sonra durak sesi olan Sol ile karar verilir.
-                <br />
-                <br />
-                <a class="assistant-link" target="_blank" href="https://tr.wikipedia.org/wiki/Rast_(makam)">
-                  Devamı...
-                </a>
-              </div>
+            <div class="info-section">
+              Rast çıkıcı bir makamdır. Durağı Sol sesi, güçlüsü beşinci derecesindeki Re sesidir.
+              <br /><br />
+              Dizisi şu şekildedir: Sol, La, Si (koma bemol), Do, Re, Mi, Fa (bakiye diyez) ve Sol. Perdelerin Türk
+              Müziği'ndeki isimleri şöyledir: Râst, Dügâh, Segâh, Çârgâh, Nevâ, Hüseynî, Evic, Gerdâniye.
+              <br /><br />
+              Rast makamına durak sesinden başlanır, ya durakta veya güçlüde asma karar yapılır sonra tizdeki
+              dörtlüsünde de gezinildikten sonra durak sesi olan Sol ile karar verilir.
+              <br />
+              <br />
+              <a class="assistant-link" target="_blank" href="https://tr.wikipedia.org/wiki/Rast_(makam)">
+                Devamı...
+              </a>
             </div>
           </div>
-        </nav>
-      </main>
+        </div>
+      </div>
+      <!-- End Right menu -->
 
-      <footer class="footer no-print"></footer>
+      <!-- End Main Section -->
+
+      <!-- Footer Section -->
+      <div></div>
+      <div>
+        <footer class="footer no-print">Footer</footer>
+      </div>
+      <div></div>
+      <!-- End Footer Section -->
     </div>
+    <!-- JS -->
+    <script type="text/javascript" src="js/snap.svg.js"></script>
+    <script type="text/javascript" src="js/soundfont-player.js"></script>
+    <script type="text/javascript" src="js/tune.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
-    <script type="text/javascript">
-      let hamburger = document.querySelector(".hamburger");
-      let userMenu = document.querySelector(".user-menu-wrap");
-      hamburger.addEventListener(
-        "click",
-        function () {
-          this.classList.toggle("is-active");
-          userMenu.classList.toggle("user-menu-visible");
-        },
-        false
-      );
-    </script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
   </body>
 </html>
