@@ -225,11 +225,14 @@ h2.composer {
   top: 0;
 }
 
+.widget-shadow, .top-menu, .accordion-wrapper {
+  -webkit-box-shadow: 0 0 14px -12px #141414;
+          box-shadow: 0 0 14px -12px #141414;
+}
+
 .top-menu {
   width: 210mm;
   background-color: #f7f5ea;
-  -webkit-box-shadow: 0 0 14px -12px #141414;
-          box-shadow: 0 0 14px -12px #141414;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,30 +313,25 @@ h2.composer {
   overflow: hidden;
 }
 
-.left-nav {
+.left-right-navs, .left-nav, .right-nav {
   min-width: 270px;
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.left-nav {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .left-menu-wrapper {
   width: 250px;
-}
-
-.right-nav {
-  min-width: 270px;
-  width: 25%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 .footer {
@@ -419,7 +417,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: #222222;
 }
 
 .hamburger-box {
@@ -440,7 +438,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #222;
+  background-color: #222222;
   border-radius: 4px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
@@ -467,9 +465,6 @@ body ::-webkit-scrollbar-thumb:hover {
   bottom: -10px;
 }
 
-/*
-     * Squeeze
-     */
 .hamburger--squeeze .hamburger-inner {
   -webkit-transition-duration: 0.075s;
           transition-duration: 0.075s;
@@ -516,8 +511,6 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .accordion-wrapper {
-  -webkit-box-shadow: 0 0 14px -12px #141414;
-          box-shadow: 0 0 14px -12px #141414;
   margin-bottom: 24px;
 }
 
@@ -786,7 +779,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .text-underline {
   height: 2px;
   width: 35px;
-  background-color: rgba(34, 34, 34, 0.4);
+  background-color: rgba(34, 34, 34, 0.5);
   display: inline-block;
   -webkit-transition: width 200ms, background-color 200ms;
   transition: width 200ms, background-color 200ms;
@@ -860,7 +853,7 @@ body ::-webkit-scrollbar-thumb:hover {
   -webkit-box-shadow: inset 0 0 26px #fff;
           box-shadow: inset 0 0 26px #fff;
   border-color: #fff;
-  color: rgba(34, 34, 34, 0.8);
+  color: rgba(34, 34, 34, 0.5);
 }
 
 .widget-list-item:not(:last-child) {

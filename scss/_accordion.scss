@@ -1,5 +1,5 @@
 .accordion-wrapper {
-  box-shadow: 0 0 14px -12px $dark-shadow-color;
+  @extend .widget-shadow;
   margin-bottom: 24px;
 }
 
@@ -20,7 +20,7 @@
 
 .accordion-active,
 .btn-accordion:hover {
-  background-color: #f9f8ef;
+  background-color: $active-fore-color;
 }
 
 .btn-accordion .material-icons-sharp.caret {

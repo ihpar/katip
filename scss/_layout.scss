@@ -1,7 +1,11 @@
 $font-color: rgba(34, 34, 34, 1);
+$font-color-faded: rgba(34, 34, 34, 0.5);
 $far-bg-color: rgb(243, 241, 224);
 $paper-bg-color: rgb(247, 245, 234);
+$active-fore-color: rgb(249, 248, 239);
+$lightest-color: rgb(252, 251, 242);
 $dark-shadow-color: rgb(20, 20, 20);
+$paper-width: 210mm;
 
 @font-face {
   font-family: Leland;
@@ -94,18 +98,22 @@ h2.composer {
   top: 0;
 }
 
+.widget-shadow {
+  box-shadow: 0 0 14px -12px $dark-shadow-color;
+}
+
 .top-menu {
   @extend .sticky-element;
-  width: 210mm;
+  @extend .widget-shadow;
+  width: $paper-width;
   background-color: $paper-bg-color;
-  box-shadow: 0 0 14px -12px $dark-shadow-color;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
 .A4 {
-  width: 210mm;
+  width: $paper-width;
   height: 297mm;
   margin: 24px auto;
   background-color: $paper-bg-color;
@@ -115,7 +123,7 @@ h2.composer {
 
 .header-section {
   margin: auto;
-  width: 210mm;
+  width: $paper-width;
   padding: 24px 0;
   display: flex;
   justify-content: space-between;
@@ -154,12 +162,16 @@ h2.composer {
   overflow: hidden;
 }
 
-.left-nav {
+.left-right-navs {
   min-width: 270px;
   width: 25%;
   display: flex;
-  justify-content: flex-end;
   flex: 1;
+}
+
+.left-nav {
+  @extend .left-right-navs;
+  justify-content: flex-end;
 }
 
 .left-menu-wrapper {
@@ -168,14 +180,12 @@ h2.composer {
 }
 
 .right-nav {
-  min-width: 270px;
-  width: 25%;
-  flex: 1;
+  @extend .left-right-navs;
 }
 
 .footer {
   background-color: transparent;
-  width: 210mm;
+  width: $paper-width;
   margin: 0 auto;
 }
 
