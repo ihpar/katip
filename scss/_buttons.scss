@@ -6,12 +6,11 @@
   background-color: transparent;
   padding: 0;
   transition: opacity 200ms;
-}
 
-.user-menu button:hover,
-.user-menu button:focus,
-.btn-hamburger:hover {
-  opacity: 0.6;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .user-menu li:not(:last-child) {
@@ -20,7 +19,7 @@
 
 .material-icons-sharp.md-36 {
   font-size: 36px;
-  color: #222;
+  color: $font-color;
 }
 
 .top-menu-list button {
@@ -31,16 +30,16 @@
   border: none;
   display: block;
   transition: background-color 200ms, box-shadow 200ms;
-}
 
-.top-menu-list button:hover {
-  background-color: $active-fore-color;
-  box-shadow: inset 0 0 12px $lightest-color;
-}
+  &:hover {
+    background-color: $active-fore-color;
+    box-shadow: inset 0 0 12px $lightest-color;
+  }
 
-.top-menu-list button:focus {
-  background-color: $lightest-color;
-  box-shadow: inset 0 0 16px #fff;
+  &:focus {
+    background-color: $lightest-color;
+    box-shadow: inset 0 0 16px $pure-white;
+  }
 }
 
 .img-ht {
@@ -90,18 +89,16 @@
   background-color: $active-fore-color;
   box-shadow: inset 0 0 12px $lightest-color;
   transition: background-color 200ms, box-shadow 200ms;
-}
 
-.accordion-buttons-wrap button:hover,
-.accordion-buttons-grid button:hover {
-  background-color: $active-fore-color;
-  box-shadow: inset 0 0 14px #fff;
-}
+  &:hover {
+    background-color: $active-fore-color;
+    box-shadow: inset 0 0 14px $pure-white;
+  }
 
-.accordion-buttons-wrap button:focus,
-.accordion-buttons-grid button:focus {
-  background-color: $lightest-color;
-  box-shadow: inset 0 0 16px #fff;
+  &:focus {
+    background-color: $lightest-color;
+    box-shadow: inset 0 0 16px $pure-white;
+  }
 }
 
 .widget-icon-button-text {

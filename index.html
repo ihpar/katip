@@ -8,6 +8,18 @@
     <link rel="shortcut icon" href="img/q2.png" />
     <!-- styles -->
     <link rel="stylesheet" href="css/main.css" />
+    <style type="text/css">
+      .music-line {
+        font-family: Leland;
+        font-size: 32px;
+        width: 100%;
+        display: flex;
+        margin: 64px 0;
+      }
+      .bpm-section {
+        font-family: Leland;
+      }
+    </style>
   </head>
   <body>
     <div class="page-grid">
@@ -421,13 +433,31 @@
           <div class="paper-contents">
             <h1 class="song-title">Yine Bir Gülnihâl Aldı Bu Gönlümü</h1>
             <h2 class="composer">Hammâmîzâde İsmâil Dede Efendi</h2>
+            <h3 class="bpm-section"><span>&#xE1D5;</span> = 150</h3>
+            <div>
+              <div class="music-line">
+                <div class="measure">
+                  <span>&#xE050;</span>
+                  <span>&#xE440;</span>
+                  <span>&#xE083;</span>
+                  <span>&#xE084;</span>
+                  <span>&#xE1D7;</span>
+                </div>
+                <div class="measure">
+                  <span>&#xE1D5;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="A4">
+          <div class="paper-contents">
             <div>
               <img src="img/gulnihal.svg" style="width: 100%" />
             </div>
           </div>
         </div>
-
-        <div class="A4"></div>
       </div>
       <!-- End Main Center Content -->
 
@@ -445,20 +475,23 @@
               <br />
               <div class="text-underline"></div>
             </div>
-            <div class="info-section">
+            <div class="content-scroller info-section">
               Rast çıkıcı bir makamdır. Durağı Sol sesi, güçlüsü beşinci derecesindeki Re sesidir.
               <br /><br />
-              Dizisi şu şekildedir: Sol, La, Si (koma bemol), Do, Re, Mi, Fa (bakiye diyez) ve Sol. Perdelerin Türk
-              Müziği'ndeki isimleri şöyledir: Râst, Dügâh, Segâh, Çârgâh, Nevâ, Hüseynî, Evic, Gerdâniye.
+              Dizisi şu şekildedir: Sol, La, Si (koma bemol), Do, Re, Mi, Fa (bakiye diyez) ve Sol.
+              <br /><br />
+              Perdelerin Türk Müziği'ndeki isimleri şöyledir: Râst, Dügâh, Segâh, Çârgâh, Nevâ, Hüseynî, Evic,
+              Gerdâniye.
               <br /><br />
               Rast makamına durak sesinden başlanır, ya durakta veya güçlüde asma karar yapılır sonra tizdeki
               dörtlüsünde de gezinildikten sonra durak sesi olan Sol ile karar verilir.
               <br />
               <br />
-              <a class="assistant-link" target="_blank" href="https://tr.wikipedia.org/wiki/Rast_(makam)">
-                Devamı...
-              </a>
+              Rast makamı, Klasik Türk müziğinin en temel makamı sayılır nitekim "rast" Farsça'da düz, doğru, sağ
+              manasına gelir. Uzaktan andırsa da, batı müziğinde başka seslerin kullanılmasından dolayı majör gamlarıyla
+              karşılaştırmak yanlıştır.
             </div>
+            <a class="assistant-link" target="_blank" href="https://tr.wikipedia.org/wiki/Rast_(makam)"> Devamı... </a>
           </div>
         </div>
       </div>
@@ -480,5 +513,10 @@
     <script type="text/javascript" src="js/tune.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
     <script type="text/javascript" src="js/hamburger.js"></script>
+    <script>
+      let measures = document.querySelectorAll(".measure");
+      for (let measure of measures) {
+      }
+    </script>
   </body>
 </html>

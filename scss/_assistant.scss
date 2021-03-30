@@ -20,8 +20,13 @@
 }
 
 .assistant-body {
-  padding: 12px 16px;
+  padding: 12px;
   background-color: $paper-bg-color;
+
+  .info-section {
+    padding-right: 12px;
+    max-height: 300px;
+  }
 }
 
 .search-section {
@@ -70,13 +75,15 @@
 }
 
 .assistant-link {
+  display: inline-block;
   color: inherit;
   font-weight: bold;
   text-decoration: underline;
   transition: opacity 200ms;
-}
+  margin-top: 12px;
 
-.assistant-link:hover,
-.assistant-link:focus {
-  opacity: 0.6;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
