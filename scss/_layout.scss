@@ -1,3 +1,8 @@
+$font-color: rgba(34, 34, 34, 1);
+$far-bg-color: rgb(243, 241, 224);
+$paper-bg-color: rgb(247, 245, 234);
+$dark-shadow-color: rgb(20, 20, 20);
+
 @font-face {
   font-family: Leland;
   src: url("../fonts/Leland.otf") format("opentype");
@@ -39,42 +44,15 @@ html,
 body {
   font-family: LelandText;
   font-size: 16px;
-  color: blue;
+  color: $font-color;
   height: 100%;
-  background-color: #f3f1e0;
+  background-color: $far-bg-color;
   margin: 0;
   padding: 0;
 }
 
 body {
   overflow-y: scroll;
-}
-
-body ::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-}
-
-body ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-}
-
-body ::-webkit-scrollbar-thumb {
-  cursor: pointer;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.25);
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-}
-
-body ::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-body ::-webkit-scrollbar-thumb:hover {
-  background: rgba(128, 135, 139, 0.8);
 }
 
 .page-grid {
@@ -111,14 +89,18 @@ h2.composer {
   font-size: 36px;
 }
 
-.top-menu {
-  width: 210mm;
-  background-color: #f7f5ea;
-  box-shadow: 0 0 14px -12px #141414;
-  display: flex;
-  justify-content: space-between;
+.sticky-element {
   position: sticky;
   top: 0;
+}
+
+.top-menu {
+  @extend .sticky-element;
+  width: 210mm;
+  background-color: $paper-bg-color;
+  box-shadow: 0 0 14px -12px $dark-shadow-color;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -126,8 +108,8 @@ h2.composer {
   width: 210mm;
   height: 297mm;
   margin: 24px auto;
-  background-color: #f7f5ea;
-  box-shadow: 0 0 24px -20px #141414;
+  background-color: $paper-bg-color;
+  box-shadow: 0 0 24px -20px $dark-shadow-color;
   overflow: hidden;
 }
 
@@ -181,10 +163,8 @@ h2.composer {
 }
 
 .left-menu-wrapper {
+  @extend .sticky-element;
   width: 250px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 .right-nav {

@@ -1,10 +1,10 @@
 .accordion-wrapper {
-  box-shadow: 0 0 14px -12px #141414;
+  box-shadow: 0 0 14px -12px $dark-shadow-color;
   margin-bottom: 24px;
 }
 
 .btn-accordion {
-  background-color: #f7f5ea;
+  background-color: $paper-bg-color;
   cursor: pointer;
   width: 100%;
   border: none;
@@ -33,7 +33,7 @@
 
 .accordion-panel {
   padding: 0 12px;
-  background-color: #f7f5ea;
+  background-color: $paper-bg-color;
   max-height: 0;
   overflow: hidden;
   transition: max-height 200ms;

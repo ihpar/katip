@@ -24,7 +24,7 @@
 }
 
 .top-menu-list button {
-  background-color: #f7f5ea;
+  background-color: $paper-bg-color;
   padding: 3px 2px;
   margin: 0;
   cursor: pointer;
@@ -79,7 +79,7 @@
   font-family: inherit;
   color: inherit;
   font-size: inherit;
-  background-color: #f7f5ea;
+  background-color: $paper-bg-color;
   padding: 3px 12px;
   margin: 0;
   cursor: pointer;
