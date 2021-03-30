@@ -136,24 +136,20 @@ table {
   font-family: Leland;
   src: url("../fonts/Leland.otf") format("opentype");
 }
-
 @font-face {
   font-family: LelandText;
   src: url("../fonts/LelandText.otf") format("opentype");
 }
-
 @font-face {
   font-family: BravuraText;
   src: url("../fonts/BravuraText.woff");
 }
-
 @font-face {
   font-family: "Material Icons Sharp";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/material-sharp.woff2") format("woff2");
 }
-
 .material-icons-sharp {
   font-family: "Material Icons Sharp";
   font-weight: normal;
@@ -185,16 +181,12 @@ body {
 }
 
 .page-grid {
-  display: -ms-grid;
   display: grid;
   min-height: 100vh;
-  -ms-grid-columns: 1fr 230mm 1fr;
-      grid-template-columns: 1fr 230mm 1fr;
-  -ms-grid-rows: min-content 1fr min-content;
-      grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-      grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr 230mm 1fr;
+  grid-template-rows: min-content 1fr min-content;
   gap: 6px 6px;
-      grid-template-areas: ". . ." ". . ." ". . .";
+  grid-template-areas: ". . ." ". . ." ". . .";
 }
 
 h1.song-title {
@@ -219,26 +211,20 @@ h2.composer {
   font-size: 36px;
 }
 
-.sticky-element, .top-menu, .left-menu-wrapper, .assistant.accordion-wrapper {
-  position: -webkit-sticky;
+.sticky-element, .left-menu-wrapper, .top-menu {
   position: sticky;
   top: 0;
 }
 
-.widget-shadow, .top-menu, .accordion-wrapper {
-  -webkit-box-shadow: 0 0 14px -12px #141414;
-          box-shadow: 0 0 14px -12px #141414;
+.widget-shadow, .top-menu {
+  box-shadow: 0 0 14px -12px #141414;
 }
 
 .top-menu {
   width: 210mm;
   background-color: #f7f5ea;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -247,8 +233,7 @@ h2.composer {
   height: 297mm;
   margin: 24px auto;
   background-color: #f7f5ea;
-  -webkit-box-shadow: 0 0 24px -20px #141414;
-          box-shadow: 0 0 24px -20px #141414;
+  box-shadow: 0 0 24px -20px #141414;
   overflow: hidden;
 }
 
@@ -256,78 +241,52 @@ h2.composer {
   margin: auto;
   width: 210mm;
   padding: 24px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .head-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .head-space {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   min-width: 286px;
 }
 
 .user-menu-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 190mm;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
   left: -195mm;
   opacity: 0;
-  -webkit-transition: left 600ms ease, opacity 300ms;
   transition: left 600ms ease, opacity 300ms;
 }
 
 .user-menu-visible {
   left: 0;
   opacity: 1;
-  -webkit-transition: left 300ms ease, opacity 600ms;
   transition: left 300ms ease, opacity 600ms;
 }
 
 .user-menu-clipper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 190mm;
   overflow: hidden;
 }
 
-.left-right-navs, .left-nav, .right-nav {
+.left-right-navs, .right-nav, .left-nav {
   min-width: 270px;
   width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .left-nav {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .left-menu-wrapper {
@@ -342,8 +301,6 @@ h2.composer {
 
 .top-menu-list,
 .user-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -385,14 +342,9 @@ body ::-webkit-scrollbar-thumb:hover {
   padding: 15px 0;
   display: inline-block;
   cursor: pointer;
-  -webkit-transition-property: opacity, -webkit-filter;
-  transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
   font: inherit;
   color: inherit;
   text-transform: none;
@@ -437,14 +389,9 @@ body ::-webkit-scrollbar-thumb:hover {
   background-color: #222222;
   border-radius: 4px;
   position: absolute;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
 }
 
 .hamburger-inner::before,
@@ -462,51 +409,39 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .hamburger--squeeze .hamburger-inner {
-  -webkit-transition-duration: 0.075s;
-          transition-duration: 0.075s;
-  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--squeeze .hamburger-inner::before {
-  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
   transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
 
 .hamburger--squeeze .hamburger-inner::after {
-  -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--squeeze.is-active .hamburger-inner {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition-delay: 0.12s;
-          transition-delay: 0.12s;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .hamburger--squeeze.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
   transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
 
 .hamburger--squeeze.is-active .hamburger-inner::after {
   bottom: 0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(-90deg);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .accordion-wrapper {
+  /* todo fix here */
+  box-shadow: 0 0 14px -12px #141414;
   margin-bottom: 24px;
 }
 
@@ -519,14 +454,9 @@ body ::-webkit-scrollbar-thumb:hover {
   outline: none;
   font-family: inherit;
   font-size: inherit;
-  -webkit-transition: 200ms;
   transition: 200ms;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 6px 0;
 }
 
@@ -536,13 +466,11 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .btn-accordion .material-icons-sharp.caret {
-  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 
 .accordion-active .material-icons-sharp.caret {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .accordion-panel {
@@ -550,7 +478,6 @@ body ::-webkit-scrollbar-thumb:hover {
   background-color: #f7f5ea;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 200ms;
   transition: max-height 200ms;
 }
 
@@ -559,28 +486,21 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .accordion-buttons-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .accordion-buttons-grid {
-  display: -ms-grid;
   display: grid;
   grid-gap: 6px;
 }
 
 .grid-3 {
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .grid-4 {
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 
 .user-menu button,
@@ -590,10 +510,8 @@ body ::-webkit-scrollbar-thumb:hover {
   border: none;
   background-color: transparent;
   padding: 0;
-  -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
 }
-
 .user-menu button:hover, .user-menu button:focus,
 .btn-hamburger:hover,
 .btn-hamburger:focus {
@@ -616,22 +534,15 @@ body ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   border: none;
   display: block;
-  -webkit-transition: background-color 200ms, -webkit-box-shadow 200ms;
-  transition: background-color 200ms, -webkit-box-shadow 200ms;
   transition: background-color 200ms, box-shadow 200ms;
-  transition: background-color 200ms, box-shadow 200ms, -webkit-box-shadow 200ms;
 }
-
 .top-menu-list button:hover {
   background-color: #f9f8ef;
-  -webkit-box-shadow: inset 0 0 12px #fcfbf2;
-          box-shadow: inset 0 0 12px #fcfbf2;
+  box-shadow: inset 0 0 12px #fcfbf2;
 }
-
 .top-menu-list button:focus {
   background-color: #fcfbf2;
-  -webkit-box-shadow: inset 0 0 16px white;
-          box-shadow: inset 0 0 16px white;
+  box-shadow: inset 0 0 16px white;
 }
 
 .img-ht {
@@ -675,36 +586,22 @@ body ::-webkit-scrollbar-thumb:hover {
   margin: 0;
   cursor: pointer;
   border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #f9f8ef;
-  -webkit-box-shadow: inset 0 0 12px #fcfbf2;
-          box-shadow: inset 0 0 12px #fcfbf2;
-  -webkit-transition: background-color 200ms, -webkit-box-shadow 200ms;
-  transition: background-color 200ms, -webkit-box-shadow 200ms;
+  box-shadow: inset 0 0 12px #fcfbf2;
   transition: background-color 200ms, box-shadow 200ms;
-  transition: background-color 200ms, box-shadow 200ms, -webkit-box-shadow 200ms;
 }
-
 .accordion-buttons-wrap button:hover,
 .accordion-buttons-grid button:hover {
   background-color: #f9f8ef;
-  -webkit-box-shadow: inset 0 0 14px white;
-          box-shadow: inset 0 0 14px white;
+  box-shadow: inset 0 0 14px white;
 }
-
 .accordion-buttons-wrap button:focus,
 .accordion-buttons-grid button:focus {
   background-color: #fcfbf2;
-  -webkit-box-shadow: inset 0 0 16px white;
-          box-shadow: inset 0 0 16px white;
+  box-shadow: inset 0 0 16px white;
 }
 
 .widget-icon-button-text {
@@ -712,6 +609,9 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .assistant.accordion-wrapper {
+  /* todo fix here */
+  position: sticky;
+  top: 0;
   width: 250px;
 }
 
@@ -722,12 +622,8 @@ body ::-webkit-scrollbar-thumb:hover {
   outline: none;
   font-family: inherit;
   font-size: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 6px;
 }
 
@@ -739,7 +635,6 @@ body ::-webkit-scrollbar-thumb:hover {
   padding: 12px;
   background-color: #f7f5ea;
 }
-
 .assistant-body .info-section {
   padding-right: 12px;
   max-height: 300px;
@@ -759,8 +654,7 @@ body ::-webkit-scrollbar-thumb:hover {
   outline: none;
   width: 100%;
   height: 28px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: transparent;
 }
 
@@ -769,7 +663,6 @@ body ::-webkit-scrollbar-thumb:hover {
   top: 0;
   right: 0;
   opacity: 0.4;
-  -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
 }
 
@@ -782,7 +675,6 @@ body ::-webkit-scrollbar-thumb:hover {
   width: 35px;
   background-color: rgba(34, 34, 34, 0.6);
   display: inline-block;
-  -webkit-transition: width 200ms, background-color 200ms;
   transition: width 200ms, background-color 200ms;
   position: relative;
   top: -13px;
@@ -798,11 +690,9 @@ body ::-webkit-scrollbar-thumb:hover {
   color: inherit;
   font-weight: bold;
   text-decoration: underline;
-  -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   margin-top: 12px;
 }
-
 .assistant-link:hover, .assistant-link:focus {
   opacity: 0.6;
 }
@@ -812,7 +702,6 @@ body ::-webkit-scrollbar-thumb:hover {
   text-align: center;
   vertical-align: middle;
 }
-
 .fraction::before {
   border-bottom: 1px solid rgba(34, 34, 34, 0.6);
   content: attr(top);
@@ -820,7 +709,6 @@ body ::-webkit-scrollbar-thumb:hover {
   line-height: 1.6em;
   padding: 0 0.2em;
 }
-
 .fraction::after {
   content: attr(bottom);
   display: block;
@@ -828,52 +716,34 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .widget-list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: 1px solid #fcfbf2;
   padding: 4px 6px;
   margin-right: 12px;
-  -webkit-box-shadow: inset 0 0 16px #fcfbf2;
-          box-shadow: inset 0 0 16px #fcfbf2;
+  box-shadow: inset 0 0 16px #fcfbf2;
   cursor: move;
-  -webkit-transition: border-color 200ms, color 200ms, -webkit-box-shadow 200ms;
-  transition: border-color 200ms, color 200ms, -webkit-box-shadow 200ms;
   transition: border-color 200ms, box-shadow 200ms, color 200ms;
-  transition: border-color 200ms, box-shadow 200ms, color 200ms, -webkit-box-shadow 200ms;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
-
 .widget-list-item:hover {
-  -webkit-box-shadow: inset 0 0 26px white;
-          box-shadow: inset 0 0 26px white;
+  box-shadow: inset 0 0 26px white;
   border-color: white;
   color: rgba(34, 34, 34, 0.6);
 }
-
 .widget-list-item:hover img {
   opacity: 0.7;
 }
-
 .widget-list-item:not(:last-child) {
   margin-bottom: 8px;
 }
-
 .widget-list-item .widget-makam-img {
   width: 25%;
   text-align: right;
   margin-right: 12px;
 }
-
 .widget-list-item .widget-makam-img img {
   height: 48px;
-  -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
 }
 
@@ -894,22 +764,24 @@ body ::-webkit-scrollbar-thumb:hover {
 
 @media print {
   html,
-  body {
+body {
     background-color: transparent;
   }
+
   html,
-  body,
-  .A4 {
+body,
+.A4 {
     margin: 0;
     padding: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     width: 210mm;
   }
+
   .no-print {
     width: 0;
     height: 0;
     display: none;
   }
 }
+
 /*# sourceMappingURL=main.css.map */

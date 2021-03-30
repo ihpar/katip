@@ -1,10 +1,13 @@
+@use "globals";
+
 .accordion-wrapper {
-  @extend .widget-shadow;
+  /* todo fix here */
+  box-shadow: 0 0 14px -12px globals.$dark-shadow-color;
   margin-bottom: 24px;
 }
 
 .btn-accordion {
-  background-color: $paper-bg-color;
+  background-color: globals.$paper-bg-color;
   cursor: pointer;
   width: 100%;
   border: none;
@@ -20,7 +23,7 @@
 
 .accordion-active,
 .btn-accordion:hover {
-  background-color: $active-fore-color;
+  background-color: globals.$active-fore-color;
 }
 
 .btn-accordion .material-icons-sharp.caret {
@@ -33,7 +36,7 @@
 
 .accordion-panel {
   padding: 0 12px;
-  background-color: $paper-bg-color;
+  background-color: globals.$paper-bg-color;
   max-height: 0;
   overflow: hidden;
   transition: max-height 200ms;

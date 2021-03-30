@@ -1,3 +1,5 @@
+@use "globals";
+
 @font-face {
   font-family: Leland;
   src: url("../fonts/Leland.otf") format("opentype");
@@ -39,9 +41,9 @@ html,
 body {
   font-family: LelandText;
   font-size: 16px;
-  color: $font-color;
+  color: globals.$font-color;
   height: 100%;
-  background-color: $far-bg-color;
+  background-color: globals.$far-bg-color;
   margin: 0;
   padding: 0;
 }
@@ -90,31 +92,31 @@ h2.composer {
 }
 
 .widget-shadow {
-  box-shadow: 0 0 14px -12px $dark-shadow-color;
+  box-shadow: 0 0 14px -12px globals.$dark-shadow-color;
 }
 
 .top-menu {
   @extend .sticky-element;
   @extend .widget-shadow;
-  width: $paper-width;
-  background-color: $paper-bg-color;
+  width: globals.$paper-width;
+  background-color: globals.$paper-bg-color;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
 .A4 {
-  width: $paper-width;
+  width: globals.$paper-width;
   height: 297mm;
   margin: 24px auto;
-  background-color: $paper-bg-color;
-  box-shadow: 0 0 24px -20px $dark-shadow-color;
+  background-color: globals.$paper-bg-color;
+  box-shadow: 0 0 24px -20px globals.$dark-shadow-color;
   overflow: hidden;
 }
 
 .header-section {
   margin: auto;
-  width: $paper-width;
+  width: globals.$paper-width;
   padding: 24px 0;
   display: flex;
   justify-content: space-between;
@@ -176,7 +178,7 @@ h2.composer {
 
 .footer {
   background-color: transparent;
-  width: $paper-width;
+  width: globals.$paper-width;
   margin: 0 auto;
 }
 

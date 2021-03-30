@@ -1,3 +1,5 @@
+@use "globals";
+
 /*!
  * @author Jonathan Suh @jonsuh
  */
@@ -25,7 +27,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: $font-color;
+  background-color: globals.$font-color;
 }
 
 .hamburger-box {
@@ -45,7 +47,7 @@
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: $font-color;
+  background-color: globals.$font-color;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;

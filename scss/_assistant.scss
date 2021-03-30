@@ -1,10 +1,14 @@
+@use "globals";
+
 .assistant.accordion-wrapper {
-  @extend .sticky-element;
+  /* todo fix here */
+  position: sticky;
+  top: 0;
   width: 250px;
 }
 
 .assistant-title {
-  background-color: $active-fore-color;
+  background-color: globals.$active-fore-color;
   border: none;
   text-align: left;
   outline: none;
@@ -21,7 +25,7 @@
 
 .assistant-body {
   padding: 12px;
-  background-color: $paper-bg-color;
+  background-color: globals.$paper-bg-color;
 
   .info-section {
     padding-right: 12px;
@@ -62,7 +66,7 @@
 .text-underline {
   height: 2px;
   width: 35px;
-  background-color: $font-color-faded;
+  background-color: globals.$font-color-faded;
   display: inline-block;
   transition: width 200ms, background-color 200ms;
   position: relative;
@@ -71,7 +75,7 @@
 
 .txt-input:focus ~ div.text-underline {
   width: 100%;
-  background-color: $font-color;
+  background-color: globals.$font-color;
 }
 
 .assistant-link {
