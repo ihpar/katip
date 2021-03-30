@@ -194,7 +194,7 @@ body {
       grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
       grid-template-rows: min-content 1fr min-content;
   gap: 6px 6px;
-      grid-template-areas: ". . ." ". . ." ". . .";
+      grid-template-areas: ". . ." ". . ." ". . .";
 }
 
 h1.song-title {
