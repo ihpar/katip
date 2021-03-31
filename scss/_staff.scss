@@ -1,0 +1,72 @@
+@use "globals";
+@use "sass:math";
+
+$height-unit: 11px;
+
+.music-line {
+  width: 100%;
+  display: flex;
+  margin: 11px 0;
+}
+
+.bpm-section {
+  font-family: Leland;
+}
+
+.measure {
+  display: grid;
+
+  &:hover .staff-top,
+  &:hover .staff-bottom {
+    opacity: 0.3;
+  }
+}
+
+.measure .music-symbols {
+  grid-area: 1/1;
+}
+
+.music-symbols span {
+  font-family: Leland;
+  font-size: $height-unit * 3 + math.round($height-unit / 4); /* 2 + 3k */
+  display: inline-block;
+  line-height: $height-unit * 3 + math.round($height-unit / 4);
+  position: relative;
+  top: $height-unit * 7 - math.floor($height-unit / 10);
+}
+
+span.spacer {
+  width: 6px;
+}
+
+.single-barline {
+  width: 1px;
+  height: 4 * $height-unit + 1px; /* 4k + 1 */
+  background-color: globals.$font-color;
+  position: relative;
+  grid-area: 1/1;
+  top: 6 * $height-unit - 1px; /* 6k - 1 */
+}
+
+.staff-lines {
+  width: 100%;
+  height: $height-unit * 16 - 1px; /* 15 + 16k (k=11) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-area: 1/1;
+
+  .staff-top,
+  .staff-middle,
+  .staff-bottom {
+    background-color: globals.$font-color;
+    width: 100%;
+    height: 1px;
+  }
+
+  .staff-top,
+  .staff-bottom {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+}
