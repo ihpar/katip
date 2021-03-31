@@ -10,15 +10,59 @@
     <link rel="stylesheet" href="css/main.css" />
     <style type="text/css">
       .music-line {
-        font-family: Leland;
-        font-size: 32px;
         width: 100%;
         display: flex;
-        margin: 64px 0;
+        margin: 11px 0;
       }
 
       .bpm-section {
         font-family: Leland;
+      }
+
+      .measure {
+        display: grid;
+      }
+
+      .measure .music-symbols {
+        padding: 0 6px;
+        grid-area: 1/1;
+      }
+
+      .music-symbols span {
+        font-family: Leland;
+        font-size: 35px; /* 2 + 3k */
+        display: inline-block;
+        line-height: 35px; /* 2 + 3k */
+        position: relative;
+        top: 76px; /* -1 + 7k */
+      }
+
+      .staff-lines {
+        width: 100%;
+        height: 175px; /* 15 + 16k (k=11) */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        grid-area: 1/1;
+      }
+
+      .staff-lines .staff-middle,
+      .staff-lines .staff-top,
+      .staff-lines .staff-bottom {
+        background-color: rgba(25, 42, 46, 0.8);
+        width: 100%;
+        height: 1px;
+      }
+
+      .staff-lines .staff-top,
+      .staff-lines .staff-bottom {
+        opacity: 0;
+        transition: opacity 200ms;
+      }
+
+      .measure:hover .staff-top,
+      .measure:hover .staff-bottom {
+        opacity: 0.4;
       }
     </style>
   </head>
@@ -438,14 +482,57 @@
             <div>
               <div class="music-line">
                 <div class="measure">
-                  <span>&#xE050;</span>
-                  <span>&#xE440;</span>
-                  <span>&#xE083;</span>
-                  <span>&#xE084;</span>
-                  <span>&#xE1D7;</span>
+                  <div class="staff-lines">
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                  </div>
+                  <div class="music-symbols">
+                    <span>&#xE050;</span>
+                    <span>&#xE440;</span>
+                    <span>&#xE083;</span>
+                    <span>&#xE084;</span>
+                    <span>&#xE1D7;</span>
+                    <span>&#xE1D5;</span>
+                    <span>&#xE1D5;</span>
+                  </div>
                 </div>
+
                 <div class="measure">
-                  <span>&#xE1D5;</span>
+                  <div class="staff-lines">
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-top"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-middle"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                    <div class="staff-bottom"></div>
+                  </div>
+                  <div class="music-symbols">
+                    <span>&#xE1D7;</span>
+                    <span>&#xE1D5;</span>
+                    <span>&#xE1D5;</span>
+                  </div>
                 </div>
               </div>
             </div>
