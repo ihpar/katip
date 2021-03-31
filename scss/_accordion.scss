@@ -1,8 +1,7 @@
 @use "globals";
 
 .accordion-wrapper {
-  /* todo fix here */
-  box-shadow: 0 0 14px -12px globals.$dark-shadow-color;
+  @extend %widget-shadow;
   margin-bottom: 24px;
 }
 

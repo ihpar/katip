@@ -55,7 +55,7 @@ body {
 .page-grid {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1fr 230mm 1fr;
+  grid-template-columns: 1fr 222mm 1fr;
   grid-template-rows: min-content 1fr min-content;
   gap: 6px 6px;
   grid-template-areas:
@@ -86,18 +86,9 @@ h2.composer {
   font-size: 36px;
 }
 
-.sticky-element {
-  position: sticky;
-  top: 0;
-}
-
-.widget-shadow {
-  box-shadow: 0 0 14px -12px globals.$dark-shadow-color;
-}
-
 .top-menu {
-  @extend .sticky-element;
-  @extend .widget-shadow;
+  @extend %sticking;
+  @extend %widget-shadow;
   width: globals.$paper-width;
   background-color: globals.$paper-bg-color;
   display: flex;
@@ -168,7 +159,7 @@ h2.composer {
 }
 
 .left-menu-wrapper {
-  @extend .sticky-element;
+  @extend %sticking;
   width: 250px;
 }
 

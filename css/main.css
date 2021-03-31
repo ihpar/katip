@@ -132,6 +132,16 @@ table {
   outline: none;
 }
 
+.assistant.accordion-wrapper, .top-menu, .left-menu-wrapper {
+  position: sticky;
+  top: 0;
+  width: 250px;
+}
+
+.accordion-wrapper, .top-menu {
+  box-shadow: 0 0 14px -12px #141414;
+}
+
 @font-face {
   font-family: Leland;
   src: url("../fonts/Leland.otf") format("opentype");
@@ -183,7 +193,7 @@ body {
 .page-grid {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1fr 230mm 1fr;
+  grid-template-columns: 1fr 222mm 1fr;
   grid-template-rows: min-content 1fr min-content;
   gap: 6px 6px;
   grid-template-areas: ". . ." ". . ." ". . .";
@@ -209,15 +219,6 @@ h2.composer {
 .mus-font {
   font-family: Leland;
   font-size: 36px;
-}
-
-.sticky-element, .left-menu-wrapper, .top-menu {
-  position: sticky;
-  top: 0;
-}
-
-.widget-shadow, .top-menu {
-  box-shadow: 0 0 14px -12px #141414;
 }
 
 .top-menu {
@@ -440,8 +441,6 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .accordion-wrapper {
-  /* todo fix here */
-  box-shadow: 0 0 14px -12px #141414;
   margin-bottom: 24px;
 }
 
@@ -606,13 +605,6 @@ body ::-webkit-scrollbar-thumb:hover {
 
 .widget-icon-button-text {
   margin-left: 6px;
-}
-
-.assistant.accordion-wrapper {
-  /* todo fix here */
-  position: sticky;
-  top: 0;
-  width: 250px;
 }
 
 .assistant-title {
