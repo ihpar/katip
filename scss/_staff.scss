@@ -28,7 +28,7 @@ $height-unit: 11px;
 
 .music-symbols span {
   font-family: Leland;
-  font-size: $height-unit * 3 + math.round($height-unit / 4); /* 2 + 3k */
+  font-size: $height-unit * 3 + math.round($height-unit / 4);
   display: inline-block;
   line-height: $height-unit * 3 + math.round($height-unit / 4);
   position: relative;
@@ -41,16 +41,16 @@ span.spacer {
 
 .single-barline {
   width: 1px;
-  height: 4 * $height-unit + 1px; /* 4k + 1 */
+  height: 4 * $height-unit + 1px;
   background-color: globals.$font-color;
   position: relative;
   grid-area: 1/1;
-  top: 6 * $height-unit - 1px; /* 6k - 1 */
+  top: 6 * $height-unit - 1px;
 }
 
 .staff-lines {
   width: 100%;
-  height: $height-unit * 16 - 1px; /* 15 + 16k (k=11) */
+  height: $height-unit * 16 - 1px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
