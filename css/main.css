@@ -757,7 +757,7 @@ body ::-webkit-scrollbar-thumb:hover {
 .music-line {
   width: 100%;
   display: flex;
-  margin: 11px 0;
+  margin: 9px 0;
 }
 
 .bpm-section {
@@ -777,33 +777,87 @@ body ::-webkit-scrollbar-thumb:hover {
 
 .music-symbols span {
   font-family: Leland;
-  font-size: 36px;
+  font-size: 34px;
   display: inline-block;
-  line-height: 36px;
+  line-height: 34px;
   position: relative;
-  top: 76px;
+  top: 68px;
+}
+.music-symbols span.clef {
+  font-size: 40px;
+  top: 72px;
+}
+.music-symbols .key-signature {
+  position: relative;
+  top: 57px;
+  display: inline-block;
+}
+.music-symbols .key-signature span {
+  font-size: 38px;
+}
+.music-symbols .key-signature span.g4 {
+  top: 15px;
+}
+.music-symbols .key-signature span.b4 {
+  top: 5px;
+}
+.music-symbols .key-signature span.c5 {
+  top: 0px;
+}
+.music-symbols .time-signature {
+  position: relative;
+  top: 52px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  height: 41px;
+  overflow: hidden;
+}
+.music-symbols .time-signature .numerator,
+.music-symbols .time-signature .denominator {
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.music-symbols .time-signature .numerator span,
+.music-symbols .time-signature .denominator span {
+  top: 0;
+  font-size: 41px;
+}
+.music-symbols .time-signature .denominator {
+  margin-top: -1px;
+}
+.music-symbols .notes-wrapper {
+  display: inline-flex;
 }
 
 span.spacer {
-  width: 6px;
+  width: 5px;
 }
 
 .single-barline {
   width: 1px;
-  height: 45px;
+  height: 41px;
   background-color: #222222;
   position: relative;
   grid-area: 1/1;
-  top: 65px;
+  top: 59px;
 }
 
 .staff-lines {
   width: 100%;
-  height: 175px;
+  height: 159px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   grid-area: 1/1;
+}
+.staff-lines .staff-top,
+.staff-lines .staff-middle,
+.staff-lines .staff-bottom,
+.staff-lines .staff-space {
+  margin: 0;
+  padding: 0;
 }
 .staff-lines .staff-top,
 .staff-lines .staff-middle,
@@ -811,6 +865,10 @@ span.spacer {
   background-color: #222222;
   width: 100%;
   height: 1px;
+}
+.staff-lines .staff-space {
+  width: 100%;
+  height: 9px;
 }
 .staff-lines .staff-top,
 .staff-lines .staff-bottom {
