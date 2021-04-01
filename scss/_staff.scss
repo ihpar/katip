@@ -1,12 +1,14 @@
 @use "globals";
 @use "sass:math";
 
-$height-unit: 11px;
+$height-unit: 9px;
+$staff-line-thickness: 1px;
+$hsl-unit: $height-unit + $staff-line-thickness;
 
 .music-line {
   width: 100%;
   display: flex;
-  margin: 11px 0;
+  margin: $height-unit 0;
 }
 
 .bpm-section {
@@ -26,35 +28,101 @@ $height-unit: 11px;
   grid-area: 1/1;
 }
 
-.music-symbols span {
-  font-family: Leland;
-  font-size: $height-unit * 3 + math.round($height-unit / 4);
-  display: inline-block;
-  line-height: $height-unit * 3 + math.round($height-unit / 4);
-  position: relative;
-  top: $height-unit * 7 - math.floor($height-unit / 10);
+.music-symbols {
+  span {
+    font-family: Leland;
+    font-size: $height-unit * 4 - $staff-line-thickness * 2;
+    display: inline-block;
+    line-height: $height-unit * 4 - $staff-line-thickness * 2;
+    position: relative;
+    top: $hsl-unit * 7 - 2;
+
+    &.clef {
+      font-size: 4 * $hsl-unit;
+      top: 6 * $hsl-unit + $height-unit + 3;
+    }
+  }
+
+  .key-signature {
+    position: relative;
+    top: $hsl-unit * 6 - 3;
+    display: inline-block;
+
+    span {
+      font-size: 4 * $hsl-unit - 2;
+
+      &.g4 {
+        top: $hsl-unit * 1.5;
+      }
+
+      &.b4 {
+        top: $hsl-unit * 0.5;
+      }
+
+      &.c5 {
+        top: $hsl-unit * 0;
+      }
+    }
+  }
+
+  .time-signature {
+    position: relative;
+    top: $hsl-unit * 5 + 2;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    height: 4 * $hsl-unit + 1;
+    overflow: hidden;
+
+    .numerator,
+    .denominator {
+      height: $hsl-unit * 2 + 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        top: 0;
+        font-size: 4 * $hsl-unit + 1;
+      }
+    }
+
+    .denominator {
+      margin-top: -1 * $staff-line-thickness;
+    }
+  }
+
+  .notes-wrapper {
+    display: inline-flex;
+  }
 }
 
 span.spacer {
-  width: 6px;
+  width: math.round($hsl-unit / 2);
 }
 
 .single-barline {
   width: 1px;
-  height: 4 * $height-unit + 1px;
+  height: 4 * $hsl-unit + $staff-line-thickness;
   background-color: globals.$font-color;
   position: relative;
   grid-area: 1/1;
-  top: 6 * $height-unit - 1px;
+  top: 5 * $hsl-unit + $height-unit;
 }
 
 .staff-lines {
   width: 100%;
-  height: $height-unit * 16 - 1px;
+  height: 16 * $height-unit + 15 * $staff-line-thickness;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   grid-area: 1/1;
+
+  .staff-top,
+  .staff-middle,
+  .staff-bottom,
+  .staff-space {
+    margin: 0;
+    padding: 0;
+  }
 
   .staff-top,
   .staff-middle,
@@ -62,6 +130,11 @@ span.spacer {
     background-color: globals.$font-color;
     width: 100%;
     height: 1px;
+  }
+
+  .staff-space {
+    width: 100%;
+    height: $height-unit;
   }
 
   .staff-top,
