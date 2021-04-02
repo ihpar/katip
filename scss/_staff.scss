@@ -67,12 +67,28 @@ $hsl-unit: $height-unit + $staff-line-thickness;
         top: $hsl-unit * 1.5;
       }
 
+      &.a4 {
+        top: $hsl-unit * 1;
+      }
+
       &.b4 {
         top: $hsl-unit * 0.5;
       }
 
       &.c5 {
         top: $hsl-unit * 0;
+      }
+
+      &.d5 {
+        top: $hsl-unit * -0.5;
+      }
+
+      &.e5 {
+        top: $hsl-unit * -1;
+      }
+
+      &.f5 {
+        top: $hsl-unit * -1.5;
       }
     }
   }

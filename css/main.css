@@ -801,11 +801,23 @@ body ::-webkit-scrollbar-thumb:hover {
 .music-symbols .key-signature span.g4 {
   top: 15px;
 }
+.music-symbols .key-signature span.a4 {
+  top: 10px;
+}
 .music-symbols .key-signature span.b4 {
   top: 5px;
 }
 .music-symbols .key-signature span.c5 {
   top: 0px;
+}
+.music-symbols .key-signature span.d5 {
+  top: -5px;
+}
+.music-symbols .key-signature span.e5 {
+  top: -10px;
+}
+.music-symbols .key-signature span.f5 {
+  top: -15px;
 }
 .music-symbols .time-signature {
   position: relative;
