@@ -1,2 +1,3 @@
-# katip
-An editor for TMM
+# Kâtip
+
+A free notation web application for TMM
