@@ -809,7 +809,7 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 .music-symbols .time-signature {
   position: relative;
-  top: 52px;
+  top: 59px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -888,15 +888,16 @@ span.spacer {
 }
 .footer ul {
   display: flex;
+  box-shadow: 0 0 8px -6px #141414;
 }
 .footer ul li {
   padding: 0;
   margin: 0;
+  display: flex;
 }
 .footer ul a {
-  box-shadow: 0 0 8px -6px #141414;
   padding: 4px;
-  margin: 0 6px 0 0;
+  margin: 0;
   text-decoration: none;
   display: inline-block;
   background-color: #f7f5ea;
@@ -914,6 +915,9 @@ span.spacer {
 }
 .footer ul a:hover img {
   opacity: 0.8;
+}
+.footer .small-text {
+  font-size: 14px;
 }
 
 @media print {

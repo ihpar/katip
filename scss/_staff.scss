@@ -79,7 +79,7 @@ $hsl-unit: $height-unit + $staff-line-thickness;
 
   .time-signature {
     position: relative;
-    top: $hsl-unit * 5 + 2;
+    top: $hsl-unit * 6 - 1;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
