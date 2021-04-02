@@ -94,6 +94,7 @@ h2.composer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  z-index: 3;
 }
 
 .A4 {
@@ -165,12 +166,6 @@ h2.composer {
 
 .right-nav {
   @extend .left-right-navs;
-}
-
-.footer {
-  background-color: transparent;
-  width: globals.$paper-width;
-  margin: 0 auto;
 }
 
 .top-menu-list,

@@ -17,3 +17,17 @@ $paper-width: 210mm;
 %widget-shadow {
   box-shadow: 0 0 14px -12px $dark-shadow-color;
 }
+
+%links {
+  display: inline-block;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 200ms;
+  margin-top: 12px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}

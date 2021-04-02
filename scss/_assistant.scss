@@ -76,15 +76,5 @@
 }
 
 .assistant-link {
-  display: inline-block;
-  color: inherit;
-  font-weight: bold;
-  text-decoration: underline;
-  transition: opacity 200ms;
-  margin-top: 12px;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
+  @extend %links;
 }

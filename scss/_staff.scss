@@ -9,6 +9,17 @@ $hsl-unit: $height-unit + $staff-line-thickness;
   width: 100%;
   display: flex;
   margin: $height-unit 0;
+
+  &.complete {
+    .measure {
+      flex-grow: 1;
+    }
+
+    .notes-wrapper {
+      flex-grow: 1;
+      justify-content: space-evenly;
+    }
+  }
 }
 
 .bpm-section {
@@ -26,6 +37,7 @@ $hsl-unit: $height-unit + $staff-line-thickness;
 
 .measure .music-symbols {
   grid-area: 1/1;
+  display: inline-flex;
 }
 
 .music-symbols {

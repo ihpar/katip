@@ -142,6 +142,18 @@ table {
   box-shadow: 0 0 14px -12px #141414;
 }
 
+.assistant-link {
+  display: inline-block;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 200ms;
+  margin-top: 12px;
+}
+.assistant-link:hover, .assistant-link:focus {
+  opacity: 0.6;
+}
+
 @font-face {
   font-family: Leland;
   src: url("../fonts/Leland.otf") format("opentype");
@@ -227,6 +239,7 @@ h2.composer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  z-index: 3;
 }
 
 .A4 {
@@ -292,12 +305,6 @@ h2.composer {
 
 .left-menu-wrapper {
   width: 250px;
-}
-
-.footer {
-  background-color: transparent;
-  width: 210mm;
-  margin: 0 auto;
 }
 
 .top-menu-list,
@@ -677,18 +684,6 @@ body ::-webkit-scrollbar-thumb:hover {
   background-color: #222222;
 }
 
-.assistant-link {
-  display: inline-block;
-  color: inherit;
-  font-weight: bold;
-  text-decoration: underline;
-  transition: opacity 200ms;
-  margin-top: 12px;
-}
-.assistant-link:hover, .assistant-link:focus {
-  opacity: 0.6;
-}
-
 .fraction {
   display: inline-block;
   text-align: center;
@@ -759,6 +754,13 @@ body ::-webkit-scrollbar-thumb:hover {
   display: flex;
   margin: 9px 0;
 }
+.music-line.complete .measure {
+  flex-grow: 1;
+}
+.music-line.complete .notes-wrapper {
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
 
 .bpm-section {
   font-family: Leland;
@@ -773,6 +775,7 @@ body ::-webkit-scrollbar-thumb:hover {
 
 .measure .music-symbols {
   grid-area: 1/1;
+  display: inline-flex;
 }
 
 .music-symbols span {
@@ -874,6 +877,20 @@ span.spacer {
 .staff-lines .staff-bottom {
   opacity: 0;
   transition: opacity 200ms;
+}
+
+.footer {
+  width: 210mm;
+  margin: 0 auto 24px auto;
+  display: flex;
+}
+.footer > div {
+  flex-grow: 1;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
 }
 
 @media print {

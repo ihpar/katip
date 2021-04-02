@@ -1,0 +1,15 @@
+@use "globals";
+
+.footer {
+  width: globals.$paper-width;
+  margin: 0 auto 24px auto;
+  display: flex;
+  & > div {
+    flex-grow: 1;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+  }
+}
