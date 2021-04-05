@@ -4,6 +4,7 @@
 $height-unit: 9px;
 $staff-line-thickness: 1px;
 $hsl-unit: $height-unit + $staff-line-thickness;
+$note-offset: 2px;
 
 .music-line {
   width: 100%;
@@ -51,14 +52,18 @@ $hsl-unit: $height-unit + $staff-line-thickness;
 
     &.clef {
       font-size: 4 * $hsl-unit;
+      height: ($hsl-unit + $staff-line-thickness) * 4;
       top: 6 * $hsl-unit + $height-unit + 3;
+      margin: 0 math.round($hsl-unit/2);
     }
   }
 
   .key-signature {
     position: relative;
     top: $hsl-unit * 6 - 3;
-    display: inline-block;
+    height: ($hsl-unit + $staff-line-thickness) * 4;
+    display: inline-flex;
+    margin-right: math.round($hsl-unit/2);
 
     span {
       font-size: 4 * $hsl-unit - 2;
@@ -100,7 +105,7 @@ $hsl-unit: $height-unit + $staff-line-thickness;
     flex-direction: column;
     align-items: center;
     height: 4 * $hsl-unit + 1;
-    overflow: hidden;
+    margin-right: math.round($hsl-unit/2);
 
     .numerator,
     .denominator {
@@ -121,11 +126,94 @@ $hsl-unit: $height-unit + $staff-line-thickness;
 
   .notes-wrapper {
     display: inline-flex;
+    .b2 {
+      top: $hsl-unit * 13.5 - $note-offset;
+    }
+    .c3 {
+      top: $hsl-unit * 13 - $note-offset;
+    }
+    .d3 {
+      top: $hsl-unit * 12.5 - $note-offset;
+    }
+    .e3 {
+      top: $hsl-unit * 12 - $note-offset;
+    }
+    .f3 {
+      top: $hsl-unit * 11.5 - $note-offset;
+    }
+    .g3 {
+      top: $hsl-unit * 11 - $note-offset;
+    }
+    .a3 {
+      top: $hsl-unit * 10.5 - $note-offset;
+    }
+    .b3 {
+      top: $hsl-unit * 10 - $note-offset;
+    }
+    .c4 {
+      top: $hsl-unit * 9.5 - $note-offset;
+    }
+    .d4 {
+      top: $hsl-unit * 9 - $note-offset;
+    }
+    .e4 {
+      top: $hsl-unit * 8.5 - $note-offset;
+    }
+    .f4 {
+      top: $hsl-unit * 8 - $note-offset;
+    }
+    .g4 {
+      top: $hsl-unit * 7.5 - $note-offset;
+    }
+    .a4 {
+      top: $hsl-unit * 7 - $note-offset;
+    }
+    .b4 {
+      top: $hsl-unit * 6.5 - $note-offset;
+    }
+    .c5 {
+      top: $hsl-unit * 6 - $note-offset;
+    }
+    .d5 {
+      top: $hsl-unit * 5.5 - $note-offset;
+    }
+    .e5 {
+      top: $hsl-unit * 5 - $note-offset;
+    }
+    .f5 {
+      top: $hsl-unit * 4.5 - $note-offset;
+    }
+    .g5 {
+      top: $hsl-unit * 4 - $note-offset;
+    }
+    .a5 {
+      top: $hsl-unit * 3.5 - $note-offset;
+    }
+    .b5 {
+      top: $hsl-unit * 3 - $note-offset;
+    }
+    .c6 {
+      top: $hsl-unit * 2.5 - $note-offset;
+    }
+    .d6 {
+      top: $hsl-unit * 2 - $note-offset;
+    }
+    .e6 {
+      top: $hsl-unit * 1.5 - $note-offset;
+    }
+    .f6 {
+      top: $hsl-unit * 1 - $note-offset;
+    }
+    .g6 {
+      top: $hsl-unit * 0.5 - $note-offset;
+    }
+    .a6 {
+      top: $hsl-unit * 0 - $note-offset;
+    }
+    .b6 {
+      top: $hsl-unit * -0.5 - $note-offset;
+    }
   }
-}
-
-span.spacer {
-  width: math.round($hsl-unit / 2);
 }
 
 .single-barline {

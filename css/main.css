@@ -788,12 +788,16 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 .music-symbols span.clef {
   font-size: 40px;
+  height: 44px;
   top: 72px;
+  margin: 0 5px;
 }
 .music-symbols .key-signature {
   position: relative;
   top: 57px;
-  display: inline-block;
+  height: 44px;
+  display: inline-flex;
+  margin-right: 5px;
 }
 .music-symbols .key-signature span {
   font-size: 38px;
@@ -826,7 +830,7 @@ body ::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   align-items: center;
   height: 41px;
-  overflow: hidden;
+  margin-right: 5px;
 }
 .music-symbols .time-signature .numerator,
 .music-symbols .time-signature .denominator {
@@ -846,9 +850,92 @@ body ::-webkit-scrollbar-thumb:hover {
 .music-symbols .notes-wrapper {
   display: inline-flex;
 }
-
-span.spacer {
-  width: 5px;
+.music-symbols .notes-wrapper .b2 {
+  top: 133px;
+}
+.music-symbols .notes-wrapper .c3 {
+  top: 128px;
+}
+.music-symbols .notes-wrapper .d3 {
+  top: 123px;
+}
+.music-symbols .notes-wrapper .e3 {
+  top: 118px;
+}
+.music-symbols .notes-wrapper .f3 {
+  top: 113px;
+}
+.music-symbols .notes-wrapper .g3 {
+  top: 108px;
+}
+.music-symbols .notes-wrapper .a3 {
+  top: 103px;
+}
+.music-symbols .notes-wrapper .b3 {
+  top: 98px;
+}
+.music-symbols .notes-wrapper .c4 {
+  top: 93px;
+}
+.music-symbols .notes-wrapper .d4 {
+  top: 88px;
+}
+.music-symbols .notes-wrapper .e4 {
+  top: 83px;
+}
+.music-symbols .notes-wrapper .f4 {
+  top: 78px;
+}
+.music-symbols .notes-wrapper .g4 {
+  top: 73px;
+}
+.music-symbols .notes-wrapper .a4 {
+  top: 68px;
+}
+.music-symbols .notes-wrapper .b4 {
+  top: 63px;
+}
+.music-symbols .notes-wrapper .c5 {
+  top: 58px;
+}
+.music-symbols .notes-wrapper .d5 {
+  top: 53px;
+}
+.music-symbols .notes-wrapper .e5 {
+  top: 48px;
+}
+.music-symbols .notes-wrapper .f5 {
+  top: 43px;
+}
+.music-symbols .notes-wrapper .g5 {
+  top: 38px;
+}
+.music-symbols .notes-wrapper .a5 {
+  top: 33px;
+}
+.music-symbols .notes-wrapper .b5 {
+  top: 28px;
+}
+.music-symbols .notes-wrapper .c6 {
+  top: 23px;
+}
+.music-symbols .notes-wrapper .d6 {
+  top: 18px;
+}
+.music-symbols .notes-wrapper .e6 {
+  top: 13px;
+}
+.music-symbols .notes-wrapper .f6 {
+  top: 8px;
+}
+.music-symbols .notes-wrapper .g6 {
+  top: 3px;
+}
+.music-symbols .notes-wrapper .a6 {
+  top: -2px;
+}
+.music-symbols .notes-wrapper .b6 {
+  top: -7px;
 }
 
 .single-barline {
