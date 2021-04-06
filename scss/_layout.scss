@@ -1,29 +1,19 @@
 @use "globals";
 
 @font-face {
-  font-family: Leland;
-  src: url("../fonts/Leland.otf") format("opentype");
-}
-
-@font-face {
-  font-family: LelandText;
-  src: url("../fonts/LelandText.otf") format("opentype");
-}
-
-@font-face {
   font-family: BravuraText;
-  src: url("../fonts/BravuraText.woff");
+  src: url("../fonts/woff/BravuraText.woff");
 }
 
 @font-face {
-  font-family: "Material Icons Sharp";
+  font-family: MaterialSharp;
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/material-sharp.woff2") format("woff2");
 }
 
 .material-icons-sharp {
-  font-family: "Material Icons Sharp";
+  font-family: MaterialSharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -39,7 +29,7 @@
 
 html,
 body {
-  font-family: LelandText;
+  font-family: BravuraText;
   font-size: 16px;
   color: globals.$font-color;
   height: 100%;
@@ -82,7 +72,7 @@ h2.composer {
 }
 
 .mus-font {
-  font-family: Leland;
+  font-family: BravuraText;
   font-size: 36px;
 }
 

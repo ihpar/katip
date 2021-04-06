@@ -24,7 +24,7 @@ $note-offset: 2px;
 }
 
 .bpm-section {
-  font-family: Leland;
+  font-family: BravuraText;
 }
 
 .measure {
@@ -43,7 +43,7 @@ $note-offset: 2px;
 
 .music-symbols {
   span {
-    font-family: Leland;
+    font-family: BravuraText;
     font-size: $height-unit * 4 - $staff-line-thickness * 2;
     display: inline-block;
     line-height: $height-unit * 4 - $staff-line-thickness * 2;
