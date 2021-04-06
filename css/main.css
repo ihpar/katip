@@ -156,7 +156,7 @@ table {
 
 @font-face {
   font-family: BravuraText;
-  src: url("../fonts/woff/BravuraText.woff");
+  src: url("../fonts/woff/BravuraText.woff2") format("woff2");
 }
 @font-face {
   font-family: MaterialSharp;
@@ -164,7 +164,7 @@ table {
   font-weight: 400;
   src: url("../fonts/material-sharp.woff2") format("woff2");
 }
-.material-icons-sharp {
+.i-sharp {
   font-family: MaterialSharp;
   font-weight: normal;
   font-style: normal;
@@ -176,7 +176,7 @@ table {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: auto;
 }
 
 html,
@@ -220,9 +220,10 @@ h2.composer {
   padding: 6px 0;
 }
 
-.mus-font {
+.mus {
   font-family: BravuraText;
   font-size: 36px;
+  -webkit-font-smoothing: auto;
 }
 
 .top-menu {
@@ -538,40 +539,44 @@ body ::-webkit-scrollbar-thumb:hover {
   margin-right: 4px;
 }
 
-.material-icons-sharp.md-36 {
+.i-sharp.md-36 {
   font-size: 36px;
   color: #222222;
+}
+
+.top-menu-list button {
+  display: inline-flex;
+  overflow: hidden;
+}
+.top-menu-list.accidental-controls button {
+  padding: 3px 5px;
+}
+.top-menu-list.accidental-controls button span {
+  overflow: hidden;
+  height: 30px;
+  line-height: 38px;
+}
+.top-menu-list.duration-controls button {
+  padding: 3px 5px;
+}
+.top-menu-list.duration-controls button span {
+  overflow: hidden;
+  height: 22px;
+  line-height: 38px;
+}
+.top-menu-list.rest-controls button {
+  padding: 3px 5px;
+}
+.top-menu-list.rest-controls button span {
+  overflow: hidden;
+  font-size: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .img-ht {
   height: 30px;
   display: block;
-}
-
-.mus-font-span {
-  display: block;
-  font-family: BravuraText;
-  font-size: 22px;
-  line-height: 50px;
-  height: 30px;
-  padding: 0 5px;
-}
-
-.braura-font-span {
-  font-family: BravuraText;
-  line-height: 30px;
-  font-size: 30px;
-  display: block;
-}
-
-.accidental-controls .mus-font-span {
-  font-size: 30px;
-  line-height: 34px;
-}
-
-.rest-controls .mus-font-span {
-  font-size: 20px;
-  line-height: 28px;
 }
 
 .accordion-buttons-wrap button,
