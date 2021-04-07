@@ -223,7 +223,7 @@ h2.composer {
 .mus {
   font-family: BravuraText;
   font-size: 36px;
-  -webkit-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .top-menu {
@@ -548,21 +548,36 @@ body ::-webkit-scrollbar-thumb:hover {
   display: inline-flex;
   overflow: hidden;
 }
+.top-menu-list.accidental-controls {
+  height: 36px;
+  overflow: hidden;
+}
 .top-menu-list.accidental-controls button {
+  height: 100%;
   padding: 3px 5px;
 }
 .top-menu-list.accidental-controls button span {
   overflow: hidden;
   height: 30px;
   line-height: 38px;
+  font-size: 44px;
+}
+.top-menu-list.accidental-controls button span.high {
+  line-height: 46px;
+  height: 28px;
+}
+.top-menu-list.duration-controls {
+  height: 36px;
+  overflow: hidden;
 }
 .top-menu-list.duration-controls button {
+  height: 100%;
   padding: 3px 5px;
 }
 .top-menu-list.duration-controls button span {
-  overflow: hidden;
-  height: 22px;
-  line-height: 38px;
+  height: 30px;
+  font-size: 27px;
+  line-height: 58px;
 }
 .top-menu-list.rest-controls button {
   padding: 3px 5px;
