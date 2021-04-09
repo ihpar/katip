@@ -54,48 +54,103 @@
   &.accidental-controls {
     height: 36px;
     overflow: hidden;
-  }
 
-  &.accidental-controls button {
-    height: 100%;
-    padding: 3px 5px;
+    button {
+      height: 100%;
+      padding: 3px 5px;
 
-    span {
-      overflow: hidden;
-      height: 30px;
-      line-height: 38px;
-      font-size: 44px;
-    }
+      span {
+        height: 100%;
+        margin: 0;
+        display: inline-block;
+        background-image: url("../img/sprites/accidentals-sprite-6.svg");
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-    span.high {
-      line-height: 46px;
-      height: 28px;
+        &.bekar {
+          background-position-x: 0;
+          width: 10px;
+        }
+
+        &.fazla-bemol {
+          background-position-x: -176px;
+          width: 10px;
+        }
+
+        &.bakiyye-bemol {
+          background-position-x: -239px;
+          width: 10px;
+        }
+
+        &.k-mucennep-bemol {
+          background-position-x: -188px;
+          width: 10px;
+        }
+
+        &.b-mucennep-bemol {
+          background-position-x: -253px;
+          width: 10px;
+        }
+
+        &.tanini-bemol {
+          background-position-x: -220px;
+          width: 14px;
+        }
+
+        &.fazla-diyez {
+          background-position-x: -13px;
+          width: 10px;
+        }
+
+        &.bakiyye-diyez {
+          background-position-x: -25px;
+          width: 10px;
+        }
+
+        &.k-mucennep-diyez {
+          background-position-x: -67px;
+          width: 12px;
+        }
+
+        &.b-mucennep-diyez {
+          background-position-x: -83px;
+          width: 12px;
+        }
+
+        &.tanini-diyez {
+          background-position-x: -53px;
+          width: 11px;
+        }
+      }
     }
   }
 
   &.duration-controls {
     height: 36px;
     overflow: hidden;
-  }
 
-  &.duration-controls button {
-    height: 100%;
-    padding: 3px 5px;
+    button {
+      height: 100%;
+      padding: 3px 5px;
 
-    span {
-      height: 30px;
-      font-size: 27px;
-      line-height: 58px;
+      span {
+        height: 30px;
+        font-size: 27px;
+        line-height: 58px;
+      }
     }
   }
 
-  &.rest-controls button {
-    padding: 3px 5px;
-    span {
-      overflow: hidden;
-      font-size: 30px;
-      height: 30px;
-      line-height: 30px;
+  &.rest-controls {
+    button {
+      padding: 3px 5px;
+      span {
+        overflow: hidden;
+        font-size: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
     }
   }
 }
