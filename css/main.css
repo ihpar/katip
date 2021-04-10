@@ -618,18 +618,66 @@ body ::-webkit-scrollbar-thumb:hover {
   padding: 3px 5px;
 }
 .top-menu-list.duration-controls button span {
-  height: 30px;
-  font-size: 27px;
-  line-height: 58px;
+  height: 100%;
+  margin: 0;
+  display: inline-block;
+  background-image: url("../img/sprites/duration-sprite.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top-menu-list.duration-controls button span.whole {
+  background-position-x: 1px;
+  width: 18px;
+}
+.top-menu-list.duration-controls button span.half {
+  background-position-x: -28px;
+  width: 14px;
+}
+.top-menu-list.duration-controls button span.fourth {
+  background-position-x: -51px;
+  width: 14px;
+}
+.top-menu-list.duration-controls button span.eighth {
+  background-position-x: -74px;
+  width: 22px;
+}
+.top-menu-list.duration-controls button span.sixteenth {
+  background-position-x: -105px;
+  width: 22px;
+}
+.top-menu-list.duration-controls button span.thirtysecond {
+  background-position-x: -135px;
+  width: 22px;
+}
+.top-menu-list.duration-controls button span.sixtyfourth {
+  background-position-x: -165px;
+  width: 22px;
+}
+.top-menu-list.duration-controls button span.onetwentyeighth {
+  background-position-x: -195px;
+  width: 20px;
+}
+.top-menu-list.duration-controls button span.dotted {
+  background-position-x: -224px;
+  width: 9px;
+}
+.top-menu-list.duration-controls button span.double-dotted {
+  background-position-x: -239px;
+  width: 14px;
 }
 .top-menu-list.rest-controls button {
+  height: 100%;
   padding: 3px 5px;
 }
 .top-menu-list.rest-controls button span {
-  overflow: hidden;
-  font-size: 30px;
-  height: 30px;
-  line-height: 30px;
+  height: 100%;
+  width: 36px;
+  margin: 0;
+  display: inline-block;
+  background-image: url("../img/controls/rests.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .img-ht {
