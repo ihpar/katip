@@ -51,16 +51,15 @@ $note-offset: 2px;
     top: $hsl-unit * 7 - 2;
 
     &.clef {
-      font-size: 4 * $hsl-unit;
-      height: ($hsl-unit + $staff-line-thickness) * 4;
-      top: 6 * $hsl-unit + $height-unit + 3;
+      font-size: 5 * $hsl-unit;
+      height: 5 * $hsl-unit;
       margin: 0 math.round($hsl-unit/2);
     }
   }
 
   .key-signature {
     position: relative;
-    top: $hsl-unit * 6 - 3;
+    top: $hsl-unit * 6 + 1;
     height: ($hsl-unit + $staff-line-thickness) * 4;
     display: inline-flex;
     margin-right: math.round($hsl-unit/2);
@@ -109,11 +108,12 @@ $note-offset: 2px;
 
     .numerator,
     .denominator {
-      height: $hsl-unit * 2 + 1;
       display: flex;
       align-items: center;
       justify-content: center;
       span {
+        font-family: BravuraText;
+        height: $hsl-unit * 2 + 1;
         top: 0;
         font-size: 4 * $hsl-unit + 1;
       }

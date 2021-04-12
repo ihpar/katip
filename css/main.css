@@ -890,14 +890,13 @@ body ::-webkit-scrollbar-thumb:hover {
   top: 68px;
 }
 .music-symbols span.clef {
-  font-size: 40px;
-  height: 44px;
-  top: 72px;
+  font-size: 50px;
+  height: 50px;
   margin: 0 5px;
 }
 .music-symbols .key-signature {
   position: relative;
-  top: 57px;
+  top: 61px;
   height: 44px;
   display: inline-flex;
   margin-right: 5px;
@@ -937,13 +936,14 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 .music-symbols .time-signature .numerator,
 .music-symbols .time-signature .denominator {
-  height: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .music-symbols .time-signature .numerator span,
 .music-symbols .time-signature .denominator span {
+  font-family: BravuraText;
+  height: 21px;
   top: 0;
   font-size: 41px;
 }
