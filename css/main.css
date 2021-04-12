@@ -768,7 +768,7 @@ body ::-webkit-scrollbar-thumb:hover {
   transition: opacity 200ms;
 }
 
-.txt-input:focus + span.material-icons-sharp.search-icon {
+.txt-input:focus + span.i-sharp.search-icon {
   opacity: 1;
 }
 
