@@ -112,10 +112,54 @@ $note-offset: 2px;
       align-items: center;
       justify-content: center;
       span {
-        font-family: BravuraText;
         height: $hsl-unit * 2 + 1;
         top: 0;
-        font-size: 4 * $hsl-unit + 1;
+        display: inline-block;
+        background-image: url("../img/sprites/numbers-sprite.svg");
+        background-repeat: no-repeat;
+        background-size: auto 40px;
+        background-position-y: center;
+
+        &.num-0 {
+          width: 19px;
+          background-position-x: 0px;
+        }
+        &.num-1 {
+          width: 13px;
+          background-position-x: -27px;
+        }
+        &.num-2 {
+          width: 18px;
+          background-position-x: -48px;
+        }
+        &.num-3 {
+          width: 17px;
+          background-position-x: -73px;
+        }
+        &.num-4 {
+          width: 18px;
+          background-position-x: -97px;
+        }
+        &.num-5 {
+          width: 16px;
+          background-position-x: -123px;
+        }
+        &.num-6 {
+          width: 17px;
+          background-position-x: -147px;
+        }
+        &.num-7 {
+          width: 17px;
+          background-position-x: -172px;
+        }
+        &.num-8 {
+          width: 17px;
+          background-position-x: -197px;
+        }
+        &.num-9 {
+          width: 17px;
+          background-position-x: -222px;
+        }
       }
     }
 

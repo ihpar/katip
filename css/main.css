@@ -630,8 +630,8 @@ body ::-webkit-scrollbar-thumb:hover {
   width: 18px;
 }
 .top-menu-list.duration-controls button span.half {
-  background-position-x: -28px;
-  width: 14px;
+  background-position-x: -27px;
+  width: 15px;
 }
 .top-menu-list.duration-controls button span.fourth {
   background-position-x: -51px;
@@ -942,10 +942,63 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 .music-symbols .time-signature .numerator span,
 .music-symbols .time-signature .denominator span {
-  font-family: BravuraText;
   height: 21px;
   top: 0;
-  font-size: 41px;
+  display: inline-block;
+  background-image: url("../img/sprites/numbers-sprite.svg");
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  background-position-y: center;
+}
+.music-symbols .time-signature .numerator span.num-0,
+.music-symbols .time-signature .denominator span.num-0 {
+  width: 19px;
+  background-position-x: 0px;
+}
+.music-symbols .time-signature .numerator span.num-1,
+.music-symbols .time-signature .denominator span.num-1 {
+  width: 13px;
+  background-position-x: -27px;
+}
+.music-symbols .time-signature .numerator span.num-2,
+.music-symbols .time-signature .denominator span.num-2 {
+  width: 18px;
+  background-position-x: -48px;
+}
+.music-symbols .time-signature .numerator span.num-3,
+.music-symbols .time-signature .denominator span.num-3 {
+  width: 17px;
+  background-position-x: -73px;
+}
+.music-symbols .time-signature .numerator span.num-4,
+.music-symbols .time-signature .denominator span.num-4 {
+  width: 18px;
+  background-position-x: -97px;
+}
+.music-symbols .time-signature .numerator span.num-5,
+.music-symbols .time-signature .denominator span.num-5 {
+  width: 16px;
+  background-position-x: -123px;
+}
+.music-symbols .time-signature .numerator span.num-6,
+.music-symbols .time-signature .denominator span.num-6 {
+  width: 17px;
+  background-position-x: -147px;
+}
+.music-symbols .time-signature .numerator span.num-7,
+.music-symbols .time-signature .denominator span.num-7 {
+  width: 17px;
+  background-position-x: -172px;
+}
+.music-symbols .time-signature .numerator span.num-8,
+.music-symbols .time-signature .denominator span.num-8 {
+  width: 17px;
+  background-position-x: -197px;
+}
+.music-symbols .time-signature .numerator span.num-9,
+.music-symbols .time-signature .denominator span.num-9 {
+  width: 17px;
+  background-position-x: -222px;
 }
 .music-symbols .time-signature .denominator {
   margin-top: -1px;
