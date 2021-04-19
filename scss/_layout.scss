@@ -66,6 +66,10 @@ h2.composer {
   text-align: right;
 }
 
+h3.bpm-section {
+  font-size: 18px;
+}
+
 .header-section,
 .footer {
   padding: 6px 0;
@@ -166,4 +170,23 @@ h2.composer {
 
 .paper-contents {
   margin: 25mm 15mm 20mm 15mm;
+}
+
+.duration {
+  height: 22px;
+  margin: 0;
+  display: inline-block;
+  background-image: url("../img/sprites/duration-sprite.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.dur-4 {
+    background-position-x: -37px;
+    width: 11px;
+  }
+
+  &.dur-8 {
+    background-position-x: -54px;
+    width: 15px;
+  }
 }
